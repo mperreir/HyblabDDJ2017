@@ -12,7 +12,7 @@ var app = express()
 var app_names = [];
 
 var ddj2017_names = ['simple-example','auran', 'casus_ludi', 'double_mixte',
-  'euradio_nantes', 'julie_reux', 'le_crabe_fantome', 'mathias_virili',
+  'euradio_nantes', 'julie_reux', 'le_crabe_fantome', 'mathias_virilli',
   'open_odyssey', 'ouest_france', 'saint_nazaire', 'sun'];
 
 app_names.push.apply(app_names, ddj2017_names);
