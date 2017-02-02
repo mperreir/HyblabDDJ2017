@@ -11,6 +11,13 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 // You can then add whatever routing code you need
+app.all('/quiz', function(req, res){
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
+app.post('/quiz/addline', function(req, res){
+
+});
 
 // This module is exported and served by the main server.js located
 // at the root of this set of projects. You can access it by lanching the main
