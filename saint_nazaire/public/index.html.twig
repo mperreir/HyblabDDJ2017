@@ -3,41 +3,10 @@
 {% block body %}
     <div class="row">
         <div class="column small-12">
-            <h3>Current database : </h3>
-            {{ hello }}
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column small-4">
-            <select name="projet" id="projet">
-                <option value="1">Projet 1</option>
-                <option value="2">Projet 2</option>
-                <option value="3">Projet 3</option>
-            </select>
-        </div>
-        <div class="column small-4">
-            <input type="number" id="estimation">
-        </div>
-        <div class="column small-4">
-            <input type="number" id="note">
-        </div>
-        <div class="column small-4">
-            <a href="#" id="addline" class="button">Ajouter ligne</a>
+            <h3>Hello World !</h3>
         </div>
     </div>
 {% endblock %}
 
 {% block scripts %}
-<script>
-    $("#addline").click(function(){
-        var projet = $("#projet").find(":selected").val(),
-                estimation = $("#estimation").val(),
-                note = $("#note").val();
-        console.log("LELEL");
-        $.post("/saint_nazaire/quiz/addline/"+projet+"/"+estimation+"/"+note, function(data){
-            alert(data);
-        })
-    });
-</script>
 {% endblock %}

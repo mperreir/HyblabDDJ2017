@@ -42,17 +42,9 @@ app.use(express.static(path.join(__dirname, 'public')));
  *  Route to Quiz
  */
 app.all('/quiz', function(req, res){
-    var db = new sqlite3.Database(quizdb_name);
-    var yolo = "";
-    db.each("SELECT * FROM REPONSES", function(err, row){
-        yolo += "> " + row.ID_PROJET + " | " + row.ESTIMATION + " | " + row.NOTE + "<br>";
-    }, function(){
-        console.log("["+yolo+"]");
-        res.render('index.html.twig', {
-            hello: yolo
-        });
-        db.close();
-    });
+
+    res.render('index.html.twig');
+
 });
 
 /**
