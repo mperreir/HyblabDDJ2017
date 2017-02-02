@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+<head>
+	<!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+	<meta charset="utf-8">
+	<title>Hyblab 2016</title>
+	<!-- Basic viewport setting for mobile friendly page -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo_sn.ico" media="screen" />
+
+
+	<!-- Déclaration de la feuille de style du document-->
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/impots.css">
+
+</head>
+
+
+<body>
+	<div class="sections">
+
+		<!-- SECTION 1 : Gender, age and residence area -->
+	  	<section id="section1_gender" >
+	  		<h1 class="text-center">Etes-vous un homme ou un femme ?</h1>
+	  		<div id="select" class="text-center">
+	  			<div id="select_female" class="small-6 columns"><img id="female" src="svg/female.svg" width="700px" /></div>
+	  			<div id="select_male" class="small-6 columns"><img id="male" src="svg/male.svg" width="700px" /></div>
+	  		</div>
+	  		<a id="toSection1_age" class="text-center nextSectionButton"><p>Suivant</p></a>
+	  	</section>
+
+
+
+	  	<section id="section1_age">
+	  		<h1 class="text-center">Quel âge avez-vous ?</h1>
+	  		<div class="small-offset-3 bubble text-center">
+	  			<br/>
+	  			<input type="number" name="age" id="age">
+	  			<br/>
+	  		</div>
+	  		<div class="text-center">
+	  			<img class="section1_gender_img" width="700px"/>
+	  		</div>
+	  		<a id="toSection1_residence" class="text-center nextSectionButton"><p>Suivant</p></a>
+	  	</section>
+
+
+
+	  	<section id="section1_residence" >
+	  		<h1 class="text-center">Habitez-vous à Saint-nazaire ?</h1>
+	  		<div class="text-center small-offset-3 bubble">
+	  			<br/>
+			  	<input type="radio" name="residence" value="yes"> Oui<br>
+			  	<input type="radio" name="residence" value="no"> Non<br>
+	  			<br/>
+	  		</div>
+	  		<div class="text-center">
+	  			<img class="section1_gender_img" width="700px"/>
+	  		</div>
+	  		<a id="toSection2" class="text-center nextSectionButton"><p>Suivant</p></a>
+	  	</section>
+
+
+
+	  	<!-- SECTION 2 : Talk with the mayor and -->
+	  	<section id="section2">
+	  		<h1 class="text-center">Redistribution des impôts</h1>
+
+			<div class="row">
+				<div class="small-2 small-offset-2 columns"><img id="bubble1" src="svg/bubble_1.svg" width="200px" height="100px"/></div>
+	  			<div class="small-2 columns"><img id="character" src="svg/female.svg" width="700px" /></div>
+	  			<div class="small-2 columns "><img id="mayor" src="svg/mayor.svg" width="250px" /></div>
+	  		</div>
+
+
+	  		
+	  		<img id="bubble2" src="svg/bubble_2.svg" />
+	  		<img id="bubble3" src="svg/bubble_3.svg" />
+
+	  		<!--
+	  		<img id="bubble4" src="svg/bubble_4.svg" />
+	  		<img id="bubble5" src="svg/bubble_5.svg" />
+	  		<img id="bubble6" src="svg/bubble_6.svg" />
+	  		-->
+
+	  		<input type="hidden" id="currentBubble" value="1">
+			<a id="nextBubble" class="text-center nextSectionButton"><p>Suivant</p></a>
+		</section>
+
+	</div>
+
+</body>
+</html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+
+<script src="js/impots.js"></script>
+
+</body>
+</html>
