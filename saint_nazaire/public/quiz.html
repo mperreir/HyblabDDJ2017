@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+<head>
+	<!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+	<meta charset="utf-8">
+
+	<title>Hyblab 2016</title>
+	<!-- Basic viewport setting for mobile friendly page -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Déclaration de la feuille de style du document-->
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/foundation-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/quiz.css" />
+</head>
+
+
+<body>
+	<div class = "row expanded topQuizImage"></div>
+	<div class = "expanded row bottomQuiz">
+		<div class = "small-6 column bottomLeft"></div>
+		<div class = "small-6 column bottomRight">
+			
+			<div class = "row expanded rightTop">
+				<div class = "column small-9">
+					<div class="slider" data-slider data-initial-start="50">
+						<span class="slider-handle" data-slider-handle aria-controls="sliderOutput1"></span>
+					</div>
+					<div class="column small-10">
+						<span id="valeurChamp1" value=""></span>
+						<input type="number" id="sliderOutput1">						
+					</div>
+				</div>
+			</div>
+
+		<div class = "row expanded rightBot"></div>
+	</div>
+</body>
+</html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+	$('.slider').on('moved.zf.slider', function(){
+    document.getElementById("valeurChamp1").innerHTML=($(this).children('.slider-handle').attr('aria-valuenow'));
+});
+
+</script>
+	
+</html>

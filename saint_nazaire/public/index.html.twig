@@ -1,12 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="row">
-        <div class="column small-12">
-            <h3>Hello World !</h3>
-        </div>
-    </div>
+    <div class = "row expanded topQuizImage"></div>
+	<div class = "expanded row bottomQuiz">
+		<h2> Titre du projet </h2>
+		<div class = "small-6 column bottomLeft">
+			<p>Description rapide du projet</p>
+		</div>
+		<div class = "small-6 column bottomRight">
+			
+			<div class = "row expanded rightTop">
+				<div class = "column small-10 expanded sliderBox">
+					<div class="slider" data-slider data-initial-start="50">
+						<span class="slider-handle" data-slider-handle aria-controls="sliderOutput1"></span>
+					</div>
+					<div class="column expanded small-10">
+						<span id="valeurChamp1" value=""></span>
+						<input type="number" id="sliderOutput1">						
+					</div>
+				</div>
+			</div>
+
+		<div class = "row expanded rightBot">
+			<input type="button" value="suivant"></input>
+		</div>
+	</div>
 {% endblock %}
 
 {% block scripts %}
+<script>
+	$('.slider').on('moved.zf.slider', function(){
+    document.getElementById("valeurChamp1").innerHTML=($(this).children('.slider-handle').attr('aria-valuenow'));
+});
+</script>
+
 {% endblock %}
