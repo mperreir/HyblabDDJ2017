@@ -1,0 +1,42 @@
+body {
+	background-color: #36b2e8;
+}
+
+section h1 {
+	color: white;
+}
+
+section .bubble {
+	width: 140px;
+	height: 133px;
+	background-image: url("../svg/bubble_left.svg"); 
+	background-size: cover;
+	padding: 0px 12px 12px 12px;
+}
+
+.nextSectionButton {
+
+	border: white 2px solid;
+	border-radius: 2px;
+	color: white;
+}
+
+.bubble_right {
+
+	width: 210px;
+	height: 150px;
+	background-image: url("../svg/bubble_right.svg"); 
+	background-size: cover;
+	padding: 20px 10px 20px 10px;
+	font-size: 24px;
+}
+
+.bubble_left {
+
+	width: 300px;
+	height: 250px;
+	background-image: url("../svg/bubble_left.svg"); 
+	background-size: cover;
+	padding: 20px 20px 0px 20px;
+	font-size: 24px;
+}
