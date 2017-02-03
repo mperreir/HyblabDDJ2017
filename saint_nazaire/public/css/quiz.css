@@ -1,0 +1,60 @@
+.topQuizImage{
+	background-color: blue;
+	height: 60vh;
+}
+
+.bottomQuiz{
+	height: 40vh;
+	background-color : cyan;
+	padding : 1%;
+	padding-bottom: 0;
+
+}
+
+h2{
+	text-align: center;
+}
+
+.bottomLeft{
+	height:80%;
+	background-color : orange;
+	padding: 2%;
+}
+
+.bottomRight{
+	height: 80%;
+	background-color: lightblue;
+}
+
+.rightTop{
+	background-color: yellow;
+	height:60%;
+}
+
+.sliderBox{
+	margin-right: 2%;
+	padding:0;
+}
+
+#sliderOutput1{
+	font-size:0px;
+	opacity:0;
+}
+
+#valeurChamp1{
+	margin-left:1%;
+}
+
+.rightBot{
+	background-color: green;
+	height:40%;
+}
+
+input{
+	text-align: bottom;
+}
+
+body{
+	margin-left: 10%;
+	width : 80vw;
+}
