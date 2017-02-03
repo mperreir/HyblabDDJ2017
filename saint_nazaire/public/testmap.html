@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- Outil pour générer les map : http://maschek.hu/imagemap/imgmap/ -->
+
+	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Vector-based_example.svg/882px-Vector-based_example.svg.png" usemap="#imgmap201723103112" alt="">
+	<map id="imgmap201723103112" name="imgmap201723103112">
+		<area shape="rect" alt="" title="" coords="352,364,520,516" href="" target="" />
+	</map>
+
+	<script src="./js/vendor/jquery.js"></script>
+
+	<script>
+		$("area").each(function(){
+			$(this).mouseover(function(e){
+				console.log("Je suis au dessus d'une zone !");
+			});
+			$(this).mouseout(function(e){
+				console.log("Je quitte une zone ! ");
+			})
+		})
+	</script>
+</body>
+</html>
