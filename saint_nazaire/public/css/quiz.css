@@ -6,29 +6,29 @@
 .bottomQuiz{
 	height: 40vh;
 	background-color : cyan;
-	padding : 1%;
+	padding : 0 1% 0 1%;
 	padding-bottom: 0;
 
 }
 
-h2{
+.titreProjet{
 	text-align: center;
 }
 
 .bottomLeft{
-	height:80%;
+	/* height:80%; */
 	background-color : orange;
-	padding: 2%;
+	/* padding: 2%; */
 }
 
 .bottomRight{
-	height: 80%;
+	/* height: 80%; */
 	background-color: lightblue;
 }
 
 .rightTop{
 	background-color: yellow;
-	height:60%;
+	/* height:60%; */
 }
 
 .sliderBox{
@@ -47,14 +47,5 @@ h2{
 
 .rightBot{
 	background-color: green;
-	height:40%;
-}
-
-input{
-	text-align: bottom;
-}
-
-body{
-	margin-left: 10%;
-	width : 80vw;
+	/* height:40%; */
 }

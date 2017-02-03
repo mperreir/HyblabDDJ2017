@@ -19,12 +19,17 @@
 <div class="row">
 	<div class="column small-12">
 		<div class="row text-center align-bottom icon-container">
-			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-1" class="cursor"></div>
-			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-2" class="cursor"></div>
-			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-3" class="cursor"></div>
-			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-4" class="cursor"></div>
-			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-5" class="cursor"></div>
-			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-6" class="cursor"></div>
+			<div class="column small-2"></div>
+			<div class="column small-1"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-1" class="cursor"></div>
+			<div class="column small-1"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-2" class="cursor"></div>
+			<div class="column small-1"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-3" class="cursor"></div>
+			<div class="column small-1"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-4" class="cursor"></div>
+			<div class="column small-1"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-5" class="cursor"></div>
+			<div class="column small-1"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-6" class="cursor"></div>
+			<div class="column small-1"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-7" class="cursor"></div>
+			<div class="column small-1"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-8" class="cursor"></div>
+			<div class="column small-2"></div>
+
 		</div>
 		<div class="row">
 			<div class="column small-12 text-center" id="page-0">
@@ -90,7 +95,7 @@
 			<div class="column small-12 text-center" style="display: none;" id="page-4">
 				<div class="row">
 					<div class="column small-6">
-						Ceci est un super texte de mon troisième projet !
+						Ceci est un super texte de mon quatrième projet !
 					</div>
 					<div class="column small-6">
 						<div class="row">
@@ -109,7 +114,7 @@
 			<div class="column small-12 text-center" style="display: none;" id="page-5">
 				<div class="row">
 					<div class="column small-6">
-						Ceci est un super texte de mon troisième projet !
+						Ceci est un super texte de mon cinquième projet !
 					</div>
 					<div class="column small-6">
 						<div class="row">
@@ -128,7 +133,45 @@
 			<div class="column small-12 text-center" style="display: none;" id="page-6">
 				<div class="row">
 					<div class="column small-6">
-						Ceci est un super texte de mon troisième projet !
+						Ceci est un super texte de mon sixième projet !
+					</div>
+					<div class="column small-6">
+						<div class="row">
+							<div class="column small-12">
+								Estimation trop cool
+							</div>
+						</div>
+						<div class="row">
+							<div class="column small-12">
+								Note trop bien
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column small-12 text-center" style="display: none;" id="page-7">
+				<div class="row">
+					<div class="column small-6">
+						Ceci est un super texte de mon septième projet !
+					</div>
+					<div class="column small-6">
+						<div class="row">
+							<div class="column small-12">
+								Estimation trop cool
+							</div>
+						</div>
+						<div class="row">
+							<div class="column small-12">
+								Note trop bien
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column small-12 text-center" style="display: none;" id="page-8">
+				<div class="row">
+					<div class="column small-6">
+						Ceci est un super texte de mon dernier projet !
 					</div>
 					<div class="column small-6">
 						<div class="row">
@@ -180,7 +223,7 @@
 	$("#cursor-"+cursor).css("width", "60%");
 
 	$("#lelel").click(function(){
-		if(cursor < 7){
+		if(cursor < 8){
 			$("#page-0").animateCss("bounceOutRight", function(){
 				$("#cursor-"+cursor).css("width", "30%");
 				cursor++;
