@@ -1,6 +1,9 @@
+"use strict";
+
 $( document ).ready(function() {
 	
 	// hiding next sections
+	$('#section1_gender').hide();
 	$('#section1_age').hide();
 	$('#section1_residence').hide();
 	$('#section2').hide();
@@ -29,7 +32,13 @@ $( document ).ready(function() {
 
 
 
+
 	// slow scroll to selected section
+	$('#toSection1_gender').click(function() { 
+		scroll( $('#section1_intro') , $('#section1_gender') );  
+	});
+
+
 	$('#toSection1_age').click(function() {
 
 		// getting src image attribute
@@ -42,7 +51,6 @@ $( document ).ready(function() {
 	});
 
 
-
 	$('#toSection1_residence').click(function() {
 
 		// getting age input
@@ -51,9 +59,6 @@ $( document ).ready(function() {
 		// if age is not typed we do not continue
 		if (age != "" && parseInt(age) > 0 && parseInt(age) < 110) { scroll( $('#section1_age') , $('#section1_residence') ); }
 	});
-
-
-
 
 
 	$('#toSection2').click(function() {
@@ -82,14 +87,19 @@ $( document ).ready(function() {
 
 
 function scroll(from, to) {
-	from.addClass("animated slideOutUp");
-	from.hide(800);
-	to.show();
+	from.addClass("animated slideOutRight");
+	from.hide(1000);
+	to.show(400);
 	to.addClass("animated slideInUp");
 }
 
 function changeBubble(no) {
-	$('#bubble' + (no - 1)).hide();
-	$('#bubble' + no).show();
+
+	var oldBubble = $('#bubble' + (no - 1));
+	var newBubble = $('#bubble' + no);
+	
+	oldBubble.removeClass("animated zoomIn").addClass("animated zoomOut").hide(1000);
+	newBubble.show().addClass("animated zoomIn");
+	
 	$('#currentBubble').val(no);
 }

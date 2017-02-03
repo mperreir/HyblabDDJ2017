@@ -1,42 +1,52 @@
+@font-face {
+font-family: 'avenir';
+font-style: normal;
+font-weight: normal;
+src: local('Avenir LT Std 65 Medium'), url('../fonts/AvenirLTStd-Medium.woff') format('woff');
+}
+
+
 body {
 	background-color: #36b2e8;
 }
 
-section h1 {
+section .title {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+section .title h3 {
 	color: white;
+	font-family: avenir;
+	text-transform: uppercase;
 }
 
-section .bubble {
-	width: 140px;
-	height: 133px;
-	background-image: url("../svg/bubble_left.svg"); 
+
+section .character {
+	width: 70%;
+}
+
+
+section .bubbleAge {
+	background-image: url("../svg/bubble00.svg"); 
 	background-size: cover;
-	padding: 0px 12px 12px 12px;
+	padding: 1% 1% 3% 1%;
+	margin-top: 8%;
 }
 
-.nextSectionButton {
-
-	border: white 2px solid;
-	border-radius: 2px;
-	color: white;
+section .bubbleAge input {
+	width: 90%;
+	margin: 0;
 }
 
-.bubble_right {
-
-	width: 210px;
-	height: 150px;
-	background-image: url("../svg/bubble_right.svg"); 
+section .bubbleResidence {
+	background-image: url("../svg/bubble00.svg"); 
 	background-size: cover;
-	padding: 20px 10px 20px 10px;
-	font-size: 24px;
+	padding: 1% 2% 2.2% 1%;
+	margin-top: 8%;
 }
 
-.bubble_left {
-
-	width: 300px;
-	height: 250px;
-	background-image: url("../svg/bubble_left.svg"); 
-	background-size: cover;
-	padding: 20px 20px 0px 20px;
-	font-size: 24px;
+section .bubbleResidence input {
+	margin: 0;
 }
