@@ -16,24 +16,23 @@ h2{
 }
 
 .bottomLeft{
-	height:70%;
+	height:80%;
 	background-color : orange;
 	padding: 2%;
 }
 
 .bottomRight{
-	height: 70%;
+	height: 80%;
 	background-color: lightblue;
 }
 
 .rightTop{
 	background-color: yellow;
 	height:60%;
-	padding:1%;
 }
 
 .sliderBox{
-	margin: 2% 0 5% 5%;
+	margin-right: 2%;
 	padding:0;
 }
 
@@ -49,7 +48,6 @@ h2{
 .rightBot{
 	background-color: green;
 	height:40%;
-	padding-top: 20%;
 }
 
 input{
