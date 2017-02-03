@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+<head>
+	<!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+	<meta charset="utf-8">
+	<title>Hyblab 2016</title>
+	<!-- Basic viewport setting for mobile friendly page -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Déclaration de la feuille de style du document-->
+	<link rel="stylesheet" href="/saint_nazaire/css/foundation.css">
+	<link rel="stylesheet" href="/saint_nazaire/css/animate.min.css">
+	<link rel="stylesheet" href="/saint_nazaire/css/foundation-icons.css">
+	<link rel="stylesheet" href="/saint_nazaire/css/app.css">
+	<link rel="stylesheet" href="/saint_nazaire/css/style.css">
+
+</head>
+<body>
+
+<div class="row">
+	<div class="column small-12">
+		<div class="row text-center align-bottom icon-container">
+			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-1" class="cursor"></div>
+			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-2" class="cursor"></div>
+			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-3" class="cursor"></div>
+			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-4" class="cursor"></div>
+			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-5" class="cursor"></div>
+			<div class="column small-2"><img style="width: 30%" src="/saint_nazaire/img/placeholder.png" alt="" id="cursor-6" class="cursor"></div>
+		</div>
+		<div class="row">
+			<div class="column small-12 text-center" id="page-0">
+
+			</div>
+			<div class="column small-12 text-center" style="display: none;" id="page-1">
+				<div class="row">
+					<div class="column small-6">
+						Ceci est un super texte de mon premier projet !
+					</div>
+					<div class="column small-6">
+						<div class="row">
+							<div class="column small-12">
+								Estimation trop cool
+							</div>
+						</div>
+						<div class="row">
+							<div class="column small-12">
+								Note trop bien
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column small-12 text-center" style="display: none;" id="page-2">
+				<div class="row">
+					<div class="column small-6">
+						Ceci est un super texte de mon deuxième projet !
+					</div>
+					<div class="column small-6">
+						<div class="row">
+							<div class="column small-12">
+								Estimation trop cool
+							</div>
+						</div>
+						<div class="row">
+							<div class="column small-12">
+								Note trop bien
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column small-12 text-center" style="display: none;" id="page-3">
+				<div class="row">
+					<div class="column small-6">
+						Ceci est un super texte de mon troisième projet !
+					</div>
+					<div class="column small-6">
+						<div class="row">
+							<div class="column small-12">
+								Estimation trop cool
+							</div>
+						</div>
+						<div class="row">
+							<div class="column small-12">
+								Note trop bien
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column small-12 text-center" style="display: none;" id="page-4">
+				<div class="row">
+					<div class="column small-6">
+						Ceci est un super texte de mon troisième projet !
+					</div>
+					<div class="column small-6">
+						<div class="row">
+							<div class="column small-12">
+								Estimation trop cool
+							</div>
+						</div>
+						<div class="row">
+							<div class="column small-12">
+								Note trop bien
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column small-12 text-center" style="display: none;" id="page-5">
+				<div class="row">
+					<div class="column small-6">
+						Ceci est un super texte de mon troisième projet !
+					</div>
+					<div class="column small-6">
+						<div class="row">
+							<div class="column small-12">
+								Estimation trop cool
+							</div>
+						</div>
+						<div class="row">
+							<div class="column small-12">
+								Note trop bien
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column small-12 text-center" style="display: none;" id="page-6">
+				<div class="row">
+					<div class="column small-6">
+						Ceci est un super texte de mon troisième projet !
+					</div>
+					<div class="column small-6">
+						<div class="row">
+							<div class="column small-12">
+								Estimation trop cool
+							</div>
+						</div>
+						<div class="row">
+							<div class="column small-12">
+								Note trop bien
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="lelel">
+			LEL
+		</div>
+	</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+<script src="/saint_nazaire/js/vendor/jquery.js"></script>
+<script src="/saint_nazaire/js/vendor/what-input.js"></script>
+<script src="/saint_nazaire/js/vendor/foundation.js"></script>
+<script src="/saint_nazaire/js/app.js"></script>
+
+
+<script>
+	$.fn.extend({
+		animateCss: function (animationName, callback) {
+			var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+			this.addClass('animated ' + animationName).one(animationEnd, function() {
+				$(this).removeClass('animated ' + animationName);
+				if (callback != undefined){
+					callback();
+				}
+			});
+		}
+	});
+
+
+	var cursor = 1;
+
+	$("#page-0").html($("#page-"+cursor).html());
+
+	$("#cursor-"+cursor).css("width", "60%");
+
+	$("#lelel").click(function(){
+		if(cursor < 7){
+			$("#page-0").animateCss("bounceOutRight", function(){
+				$("#cursor-"+cursor).css("width", "30%");
+				cursor++;
+				$("#page-0").html($("#page-"+cursor).html());
+				$("#page-0").animateCss("bounceInLeft");
+				$("#cursor-"+cursor).css("width", "60%");
+
+			});
+
+		}
+	});
+
+</script>
+
+</body>
+</html>

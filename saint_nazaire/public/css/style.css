@@ -13,3 +13,20 @@ header img{
   max-width: 100%;
 	height: auto;
 }
+
+#page-0{
+    border: solid grey 1px;
+}
+
+.cursor{
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+
+.icon-container{
+    height: 20vh;
+    margin-bottom:4vh;
+}
