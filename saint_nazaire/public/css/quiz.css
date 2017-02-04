@@ -1,51 +1,18 @@
-.topQuizImage{
-	background-color: blue;
-	height: 60vh;
+.hidden-page {
+	display: none;
 }
 
-.bottomQuiz{
-	height: 40vh;
-	background-color : cyan;
-	padding : 0 1% 0 1%;
-	padding-bottom: 0;
-
+.estim-group{
+	max-width: 9em;
 }
 
-.titreProjet{
-	text-align: center;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-.bottomLeft{
-	/* height:80%; */
-	background-color : orange;
-	/* padding: 2%; */
-}
-
-.bottomRight{
-	/* height: 80%; */
-	background-color: lightblue;
-}
-
-.rightTop{
-	background-color: yellow;
-	/* height:60%; */
-}
-
-.sliderBox{
-	margin-right: 2%;
-	padding:0;
-}
-
-#sliderOutput1{
-	font-size:0px;
-	opacity:0;
-}
-
-#valeurChamp1{
-	margin-left:1%;
-}
-
-.rightBot{
-	background-color: green;
-	/* height:40%; */
+input[type='number'] {
+	-moz-appearance:textfield;
 }

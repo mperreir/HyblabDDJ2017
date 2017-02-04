@@ -28,5 +28,24 @@ header img{
 
 .icon-container{
     height: 20vh;
-    margin-bottom:4vh;
+    margin-bottom:10px;
+}
+
+.slider-fill{
+    height: 20px;
+}
+
+.slider{
+    height: 20px;
+}
+
+.slider-handle{
+    background-color: grey;
+    border-radius: 0;
+    height: 20px;
+    width: 10px;
+}
+
+.slider-handle:hover{
+    background-color: darkgrey;
 }
