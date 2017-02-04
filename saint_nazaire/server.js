@@ -29,7 +29,7 @@ db.serialize(function(){
         "ESTIMATION INT NOT NULL," +
         "NOTE INT NOT NULL" +
         ")");
-})
+});
 db.close();
 /**
  * ========= ROUTE =========
@@ -67,7 +67,7 @@ app.get('/quiz/mean/:project', function(req, res){
         res.json({average: row.average});
     });
     db.close();
-})
+});
 
 
 /**
