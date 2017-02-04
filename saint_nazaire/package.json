@@ -6,6 +6,7 @@
   "repository": "",
   "author": "",
   "dependencies": {
+    "body-parser": "^1.16.0",
     "express": "^4.13.3",
     "sqlite3": "^3.1.8",
     "twig": "^0.10.3"
