@@ -30,13 +30,13 @@ var db = new sqlite3.Database(quizdb_name);
 db.serialize(function(){
     db.run("PRAGMA foreign_keys = ON;");
     db.run("CREATE TABLE IF NOT EXISTS UTILISATEURS (" +
-        "ID INT PRIMARY KEY NOT NULL," +
+        "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
         "SEXE BOOLEAN NOT NULL," +
         "AGE INT NOT NULL," +
         "STNAZAIRE BOOLEAN NOT NULL" +
         ")");
     db.run("CREATE TABLE IF NOT EXISTS PROJETS (" +
-        "ID INT PRIMARY KEY NOT NULL," +
+        "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
         "NOM TEXT(60) NOT NULL" +
         ")");
     db.run("CREATE TABLE IF NOT EXISTS ESTIMATION_PROJET (" +
@@ -86,7 +86,18 @@ app.get('/projets/get/:id', function(req, res){
         res.json(rows);
     })
     db.close();
-})
+});
+
+app.get('/projets/add', function(req, res){
+    var db = new sqlite3.Database(quizdb_name);
+    db.serialize(function(){
+        var stmt = db.prepare("INSERT INTO PROJETS (NOM) VALUES (?)");
+        stmt.run(req.query.nom);
+        stmt.finalize();
+        res.send("OK");
+    });
+    db.close();
+});
 
 app.get("/utilisateurs/get/all", function(req, res){
     var db = new sqlite3.Database(quizdb_name);
@@ -102,47 +113,56 @@ app.get('/utilisateurs/get/:id', function(req, res){
         res.json(rows);
     })
     db.close();
+});
+
+app.get('/utilisateurs/add', function(req, res){
+    var db = new sqlite3.Database(quizdb_name);
+    db.serialize(function(){
+        var stmt = db.prepare("INSERT INTO UTILISATEURS (SEXE, AGE, STNAZAIRE) VALUES (?, ?, ?)");
+        stmt.run(req.query.sexe, req.query.age, req.query.stnazaire);
+        stmt.finalize();
+        res.send("OK");
+    });
+    db.close();
+});
+
+app.get('/estimation/get/all', function(req, res){
+    var db = new sqlite3.Database(quizdb_name);
+    db.all("SELECT * FROM ESTIMATION_PROJET", function(err, rows){
+        res.json(rows);
+    })
+    db.close();
 })
 
-app.get('/projets/add', function(req, res){
+app.get('/estimation/add', function(req, res){
     var db = new sqlite3.Database(quizdb_name);
-    var lastid = 0;
-    // TODO REPARER CETTE MERDE !!!!!
     db.serialize(function(){
-        var stmt = db.prepare("INSERT INTO PROJETS (NOM) VALUES (?)");
-        stmt.run(req.query.nom);
+        var stmt = db.prepare("INSERT INTO ESTIMATION_PROJET (ID_PROJET, ID_UTILISATEUR, ESTIMATION) VALUES (?, ?, ?)");
+        stmt.run(req.query.projet, req.query.utilisateur, req.query.estimation);
         stmt.finalize();
-
-        db.get("SELECT * FROM PROJETS ORDER BY ID DESC LIMIT 1", function(err, row){
-            lastid = row.ID;
-            res.json({'lastid': lastid});
-        });
+        res.send("OK");
     });
     db.close();
 });
 
-/**
- *  Adding information to database
- */
-app.post('/quiz/addline/:projet/:estimation/:note', function(req, res){
+app.get('/note/get/all', function(req, res){
     var db = new sqlite3.Database(quizdb_name);
-    db.serialize(function() {
-        var stmt = db.prepare("INSERT INTO REPONSES VALUES (?,?,?)");
-        stmt.run(req.params.projet, req.params.estimation, req.params.note);
+    db.all("SELECT * FROM NOTE_PROJET", function(err, rows){
+        res.json(rows);
+    })
+    db.close();
+})
+
+app.get('/note/add', function(req, res){
+    var db = new sqlite3.Database(quizdb_name);
+    db.serialize(function(){
+        var stmt = db.prepare("INSERT INTO NOTE_PROJET (ID_PROJET, ID_UTILISATEUR, NOTE) VALUES (?, ?, ?)");
+        stmt.run(req.query.projet, req.query.utilisateur, req.query.note);
         stmt.finalize();
-    });
-    db.close();
-    res.send("Ajout OK !");
-});
-
-app.get('/quiz/mean/:project', function(req, res){
-    var db = new sqlite3.Database(quizdb_name);
-    db.get("SELECT avg(ESTIMATION) as average FROM REPONSES WHERE ID_PROJET = ?", req.params.project, function(err, row){
-        res.json({average: row.average});
+        res.send("OK");
     });
     db.close();
 });
-
 
 /**
  * ========= EOF =========

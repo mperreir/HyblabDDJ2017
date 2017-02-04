@@ -1,18 +1,52 @@
-.hidden-page {
-	display: none;
+#vignette{
+	margin-top: 5vh;
+	margin-bottom: 3vh;
+	height: 30vh;
 }
 
-.estim-group{
-	max-width: 9em;
+.partie-basse{
+	padding-top: 2vh;
+	height: 62vh;
+	width: 100vw;
+	background-color: #0E97E7;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-	/* display: none; <- Crashes Chrome on hover */
-	-webkit-appearance: none;
-	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+#titre-projet{
+	margin-bottom: 30px;
 }
 
-input[type='number'] {
-	-moz-appearance:textfield;
+h3{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+}
+
+#contenu-projet{
+	padding: 5px;
+	background-color: ghostwhite;
+	border-radius: 5px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.slider-fill {
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
+}
+
+.slider{
+	height: 20px;
+	border-radius: 10px;
+	background-color: ghostwhite;
+}
+
+.slider-handle{
+	width: 3em;
+	height: 6em;
+	font-family: 'Roboto', sans-serif;
+	background: url("/saint_nazaire/svg/hand.svg") no-repeat center 50px;
+	background-size: 2em;
+}
+
+.slider-handle:hover{
+	background-color: transparent;
 }
