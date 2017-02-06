@@ -134,6 +134,14 @@ app.get('/estimation/get/all', function(req, res){
     db.close();
 })
 
+app.get('/estimation/get/counted/:id', function(req, res){
+    var db = new sqlite3.Database(quizdb_name);
+    db.all("SELECT ESTIMATION AS x, COUNT(ESTIMATION) AS y FROM ESTIMATION_PROJET WHERE ID_PROJET = ? GROUP BY ESTIMATION ORDER BY x ASC", [req.params.id], function(err, rows){
+        res.json(rows);
+    })
+    db.close();
+})
+
 app.get('/estimation/add', function(req, res){
     var db = new sqlite3.Database(quizdb_name);
     db.serialize(function(){

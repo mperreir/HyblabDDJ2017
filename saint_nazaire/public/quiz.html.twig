@@ -6,46 +6,415 @@
 {% endblock %}
 
 {% block body %}
-    <div class="row expanded partie-haute">
-        <div class="column small-12 text-center">
-            <img src="" alt="" id="vignette">
-        </div>
-    </div>
-    <div class="row expanded partie-basse">
-        <div class="column small-12 text-center">
-            <div class="row expanded">
+    <div class="row expanded" id="projet-1">
+        <div class="column small-12">
+            <div class="row expanded partie-haute">
                 <div class="column small-12 text-center">
-                    <h3 id="titre-projet"></h3>
+                    <img src="/saint_nazaire/svg/picto/picto-01.svg" alt="" id="vignette">
                 </div>
             </div>
-            <div class="row expanded align-center">
-                <div class="column small-12 medium-8 large-4 text-center">
-                    <p id="contenu-projet"></p>
-                </div>
-            </div>
-            <div class="row expanded" id="question-1">
-                <div class="column small-12">
+            <div class="row expanded partie-basse">
+                <div class="column small-12 text-center">
+                    <div class="row expanded">
+                        <div class="column small-12 text-center">
+                            <h3 class="titre-projet">Ville numérique</h3>
+                        </div>
+                    </div>
                     <div class="row expanded align-center">
                         <div class="column small-12 medium-8 large-4 text-center">
-                            <div class="slider" data-slider data-initial-start="50" data-end="200">
-                                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="slider-handle"></span>
-                                <span class="slider-fill" data-slider-fill></span>
-                                <input type="hidden">
+                            <p class="contenu-projet">
+                                De nouveaux services seront proposés en ligne par la ville,
+                                afin de diffuser la culture digitale et faciliter au quotidien les démarches des habitants.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row expanded" id="question-1">
+                        <div class="column small-12">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <div class="slider" data-slider data-initial-start="50" data-end="200">
+                                        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="slider-handle-1"></span>
+                                        <span class="slider-fill" data-slider-fill></span>
+                                        <input type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small12 medium-8 large-4 text-center">
+                                    <a href="#" class="button hollow secondary large" id="estimer-1">Estimer ce projet</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row expanded align-center">
-                        <div class="column small12 medium-8 large-4 text-center">
-                            <a href="#" class="button hollow secondary large" id="estimer-1">Estimer</a>
+                    <div class="row expanded align-center" id="result-1" style="display: none;">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 text-center">
+                                    <canvas id="chart-1" width="100%" height="80px"></canvas>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <a href="#" id="next-1" class="button hollow secondary">Suivant</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row expanded align-center" id="result-1" style="display: none;">
-                <div class="column small-12 medium-8 large-4 text-center">
-                    <p>Votre estimation : <span id="res-estimation"></span>€</p>
-                    <p>Moyenne des estimations : <span id="res-moyenne"></span>€</p>
-                    <p>Coût réel : <span id="res-reel">YOLO</span>€</p>
+        </div>
+    </div>
+
+    <div class="row expanded" style="display: none;" id="projet-2">
+        <div class="column small-12">
+            <div class="row expanded partie-haute">
+                <div class="column small-12 text-center">
+                    <img src="/saint_nazaire/svg/picto/picto-02.svg" alt="" id="vignette">
+                </div>
+            </div>
+            <div class="row expanded partie-basse">
+                <div class="column small-12 text-center">
+                    <div class="row expanded">
+                        <div class="column small-12 text-center">
+                            <h3 class="titre-projet">Archives Municipales</h3>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <p class="contenu-projet">
+                                Ce projet concerne la rénovation d’un magasin d’archives qui est un lieu de stockage réservé aux agents du service.
+                                L’enjeu est de permettre à la ville d’assurer la conservation de son patrimoine écrit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row expanded" id="question-2">
+                        <div class="column small-12">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <div class="slider" data-slider data-initial-start="50" data-end="200">
+                                        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="slider-handle-2"></span>
+                                        <span class="slider-fill" data-slider-fill></span>
+                                        <input type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small12 medium-8 large-4 text-center">
+                                    <a href="#" class="button hollow secondary large" id="estimer-2">Estimer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center" id="result-2" style="display: none;">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <canvas id="chart-1" width="100%" height="80px"></canvas>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <a href="#" id="next-2" class="button hollow secondary">Suivant</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row expanded" style="display: none;" id="projet-3">
+        <div class="column small-12">
+            <div class="row expanded partie-haute">
+                <div class="column small-12 text-center">
+                    <img src="/saint_nazaire/svg/picto/picto-03.svg" alt="" id="vignette">
+                </div>
+            </div>
+            <div class="row expanded partie-basse">
+                <div class="column small-12 text-center">
+                    <div class="row expanded">
+                        <div class="column small-12 text-center">
+                            <h3 class="titre-projet">Salle multi-évenement</h3>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <p class="contenu-projet">
+                                La salle multi événements ouvrira ses portes fin 2017, dans l’Alvéole 12 de la base sous-marine.
+                                Elle mettra à disposition des usagers des équipements adaptés à la grandeur de l’événement.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row expanded" id="question-3">
+                        <div class="column small-12">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <div class="slider" data-slider data-initial-start="50" data-end="200">
+                                        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="slider-handle-3"></span>
+                                        <span class="slider-fill" data-slider-fill></span>
+                                        <input type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small12 medium-8 large-4 text-center">
+                                    <a href="#" class="button hollow secondary large" id="estimer-3">Estimer ce projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center" id="result-3" style="display: none;">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <canvas id="chart-1" width="100%" height="80px"></canvas>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <a href="#" id="next-3" class="button hollow secondary">Suivant</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row expanded" style="display: none;" id="projet-4">
+        <div class="column small-12">
+            <div class="row expanded partie-haute">
+                <div class="column small-12 text-center">
+                    <img src="/saint_nazaire/svg/picto/picto-04.svg" alt="" id="vignette">
+                </div>
+            </div>
+            <div class="row expanded partie-basse">
+                <div class="column small-12 text-center">
+                    <div class="row expanded">
+                        <div class="column small-12 text-center">
+                            <h3 class="titre-projet">Aquaparc</h3>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <p class="contenu-projet">
+                                Ce centre aquatique sera implanté sur le site de la Plaine des sports qui jouxte le parc Léo Lagrange.
+                                En complément des équipements déjà existants dans l’agglomération, ce complexe offrira des bassins couverts,
+                                un espace bien-être, un solarium et des annexes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row expanded" id="question-4">
+                        <div class="column small-12">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <div class="slider" data-slider data-initial-start="50" data-end="200">
+                                        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="slider-handle-4"></span>
+                                        <span class="slider-fill" data-slider-fill></span>
+                                        <input type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small12 medium-8 large-4 text-center">
+                                    <a href="#" class="button hollow secondary large" id="estimer-4">Estimer ce projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center" id="result-4" style="display: none;">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <canvas id="chart-1" width="100%" height="80px"></canvas>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <a href="#" id="next-4" class="button hollow secondary">Suivant</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row expanded" style="display: none;" id="projet-5">
+        <div class="column small-12">
+            <div class="row expanded partie-haute">
+                <div class="column small-12 text-center">
+                    <img src="/saint_nazaire/svg/picto/picto-05.svg" alt="" id="vignette">
+                </div>
+            </div>
+            <div class="row expanded partie-basse">
+                <div class="column small-12 text-center">
+                    <div class="row expanded">
+                        <div class="column small-12 text-center">
+                            <h3 class="titre-projet">Front de mer</h3>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <p class="contenu-projet">
+                                Un réaménagement du front de mer est prévu pour l’été 2017: plantations et
+                                mobilier seront introduits (bancs, corbeilles, appuis-vélos, distributeurs de sacs canins).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row expanded" id="question-5">
+                        <div class="column small-12">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <div class="slider" data-slider data-initial-start="50" data-end="200">
+                                        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="slider-handle-5"></span>
+                                        <span class="slider-fill" data-slider-fill></span>
+                                        <input type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small12 medium-8 large-4 text-center">
+                                    <a href="#" class="button hollow secondary large" id="estimer-5">Estimer ce projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center" id="result-5" style="display: none;">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <canvas id="chart-1" width="100%" height="80px"></canvas>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <a href="#" id="next-5" class="button hollow secondary">Suivant</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row expanded" style="display: none;" id="projet-6">
+        <div class="column small-12">
+            <div class="row expanded partie-haute">
+                <div class="column small-12 text-center">
+                    <img src="/saint_nazaire/svg/picto/picto-06.svg" alt="" id="vignette">
+                </div>
+            </div>
+            <div class="row expanded partie-basse">
+                <div class="column small-12 text-center">
+                    <div class="row expanded">
+                        <div class="column small-12 text-center">
+                            <h3 class="titre-projet">Foyer de Logement</h3>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <p class="contenu-projet">
+                                Des travaux sont prévus sur la résidence autonome “Les Jardins” pour mi-mars 2017.
+                                La rénovation de cette dernière, ainsi que celle d’une autre résidence,
+                                “Louise-Michel”, devraient se terminer en mars 2019.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row expanded" id="question-6">
+                        <div class="column small-12">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <div class="slider" data-slider data-initial-start="50" data-end="200">
+                                        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="slider-handle-6"></span>
+                                        <span class="slider-fill" data-slider-fill></span>
+                                        <input type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small12 medium-8 large-4 text-center">
+                                    <a href="#" class="button hollow secondary large" id="estimer-6">Estimer ce projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center" id="result-6" style="display: none;">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <canvas id="chart-1" width="100%" height="80px"></canvas>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <a href="#" id="next-6" class="button hollow secondary">Suivant</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row expanded" style="display: none;" id="projet-7">
+        <div class="column small-12">
+            <div class="row expanded partie-haute">
+                <div class="column small-12 text-center">
+                    <img src="/saint_nazaire/svg/picto/picto-07.svg" alt="" id="vignette">
+                </div>
+            </div>
+            <div class="row expanded partie-basse">
+                <div class="column small-12 text-center">
+                    <div class="row expanded">
+                        <div class="column small-12 text-center">
+                            <h3 class="titre-projet">Bain Douche</h3>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <p class="contenu-projet">
+                                Afin de remettre en état la couverture et l’étanchéité du bâtiment, des travaux sont envisagés aux Bains-Douches de Méan-Penhoët.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row expanded" id="question-7">
+                        <div class="column small-12">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <div class="slider" data-slider data-initial-start="50" data-end="200">
+                                        <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" id="slider-handle-7"></span>
+                                        <span class="slider-fill" data-slider-fill></span>
+                                        <input type="hidden">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small12 medium-8 large-4 text-center">
+                                    <a href="#" class="button hollow secondary large" id="estimer-7">Estimer ce projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row expanded align-center" id="result-7" style="display: none;">
+                        <div class="column small-12 medium-8 large-4 text-center">
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <canvas id="chart-1" width="100%" height="80px"></canvas>
+                                </div>
+                            </div>
+                            <div class="row expanded align-center">
+                                <div class="column small-12 medium-8 large-4 text-center">
+                                    <a href="#" id="next-7" class="button hollow secondary">Suivant</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,6 +422,7 @@
 {% endblock %}
 
 {% block scripts %}
+    <script src="/saint_nazaire/js/vendor/Chart.min.js"></script>
     <script>
         $.fn.extend({
             animateCss: function (animationName, callback) {
@@ -66,60 +436,71 @@
             }
         });
 
+
+
         var numberProjects = 7;
 
-        var imgsrc = [
-            "/saint_nazaire/svg/picto/picto-01.svg",
-            "/saint_nazaire/svg/picto/picto-02.svg",
-            "/saint_nazaire/svg/picto/picto-03.svg",
-            "/saint_nazaire/svg/picto/picto-04.svg",
-            "/saint_nazaire/svg/picto/picto-05.svg",
-            "/saint_nazaire/svg/picto/picto-06.svg",
-            "/saint_nazaire/svg/picto/picto-07.svg"
-        ];
+        var currentProject = 1;
 
-        var titres = [
-            "Ville numérique",
-            "Archives Municipales",
-            "Salle multi-évenement",
-            "Aquaparc",
-            "Front de mer",
-            "Foyer de Logement",
-            "Bain Douche"
-        ];
-
-        var textes = [
-            "De nouveaux services seront proposés en ligne par la ville, afin de diffuser la culture digitale et faciliter au quotidien les démarches des habitants. ",
-            "Ce projet concerne la rénovation d’un magasin d’archives qui est un lieu de stockage réservé aux agents du service. L’enjeu est de permettre à la ville d’assurer la conservation de son patrimoine écrit.",
-            "La salle multi événements ouvrira ses portes fin 2017, dans l’Alvéole 12 de la base sous-marine. Elle mettra à disposition des usagers des équipements adaptés à la grandeur de l’événement.",
-            "Ce centre aquatique sera implanté sur le site de la Plaine des sports qui jouxte le parc Léo Lagrange. En complément des équipements déjà existants dans l’agglomération, ce complexe offrira des bassins couverts, un espace bien-être, un solarium et des annexes.",
-            "Un réaménagement du front de mer est prévu pour l’été 2017: plantations et mobilier seront introduits (bancs, corbeilles, appuis-vélos, distributeurs de sacs canins). ",
-            "Des travaux sont prévus sur la résidence autonome “Les Jardins” pour mi-mars 2017. La rénovation de cette dernière, ainsi que celle d’une autre résidence, “Louise-Michel”, devraient se terminer en mars 2019.",
-            "Afin de remettre en état la couverture et l’étanchéité du bâtiment, des travaux sont envisagés aux Bains-Douches de Méan-Penhoët. "
-        ];
-
-        function switchToProject(id){
-            if (id < numberProjects){
-                $("#vignette").attr("src", imgsrc[id]);
-                $("#titre-projet").text(titres[id]);
-                $("#contenu-projet").text(textes[id]);
-            }
-        }
-
-        $(".slider").on('moved.zf.slider', function(){
-            $("#slider-handle").text($(".slider input").val());
+        $(".slider").each(function(){
+            var leslider = $(this);
+            leslider.on('moved.zf.slider', function(){
+                var handle = leslider.find(".slider-handle");
+                var input = leslider.find("input");
+                handle.text(input.val());
+            });
         });
 
-        switchToProject(0);
 
-        $("#estimer-1").click(function(){
-            $("#question-1").toggle();
+
+        $("#projet-"+currentProject).animateCss("fadeInRight");
+
+        $("#estimer-"+currentProject).click(function(){
+            $("#question-"+currentProject).toggle();
             var estimation = $(".slider input").val();
-            $("#res-estimation").text(estimation);
-            $("#res-moyenne").text("LAMBDA");
-            $("#result-1").toggle();
+            $.get("/saint_nazaire/estimation/add?projet="+ currentProject +"&utilisateur=1&estimation="+estimation, function(data){
+               if (data === "OK"){
+                   $.getJSON("/saint_nazaire/estimation/get/counted/"+currentProject, function(data2){
+                       $("#result-"+currentProject).toggle();
+                       var tole = $("#chart-"+currentProject);
+                       var scatterChart = new Chart(tole, {
+                           type: 'line',
+                           data: {
+                               datasets: [{
+                                   label: 'Estimations totales',
+                                   data: data2,
+                                   lineTension: 0,
+                                   backgroundColor: "rgba(255, 255, 255, 1)",
+                                   pointHoverBackgroundColor: "rgba(0,0,0,1)"
+                               }]
+                           },
+                           options: {
+                               scales: {
+                                   xAxes: [{
+                                       type: 'linear',
+                                       position: 'bottom'
+                                   }]
+                               },
+                               responsive: true,
+                               defaultFontColor: "#FFF",
+                               defaultFontSize: 34
+                           }
+                       });
+                   });
+               } else {
+                   console.log("ERREUR LORS DE L'ENVOI DE L'ESTIMATION ! VEUILLEZ VERIFIER VOTRE CONNECTION INTERNET !");
+               }
+            });
         });
 
+        $("#next-"+currentProject).click(function(){
+            $("#projet-"+currentProject).animateCss("fadeOutLeft", function(){
+                $("#projet-"+currentProject).toggle();
+                currentProject++;
+                $("#projet-"+currentProject).toggle();
+                $("#projet-"+currentProject).animateCss("fadeInRight");
+            });
+        });
 
     </script>
 {% endblock %}
