@@ -28,7 +28,7 @@ section .title h3 {
 /* width of every character 
  *  if you don't reduce it takes all the column and it's needed to scroll to access the next button
 */
-section img.character {
+section .character {
 	width: 70%;
 }
 

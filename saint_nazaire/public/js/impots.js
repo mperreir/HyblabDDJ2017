@@ -39,13 +39,14 @@ $( document ).ready(function() {
 	// select either male or female image
 	$('#male').click( function() { 
 		$('.section1_gender_img').attr("src", "svg/male.svg");
-		$('#character').attr("src", "svg/male.svg");
+
 		$('#select_female').css("background-color", "");
 		$('#select_male').css("background-color", "yellow");
+		
 	});
 	$('#female').click( function() {
 		$('.section1_gender_img').attr("src", "svg/female.svg");
-		$('#character').attr("src", "svg/female.svg");
+
 		$('#select_male').css("background-color", "");
 		$('#select_female').css("background-color", "yellow");
 	});
