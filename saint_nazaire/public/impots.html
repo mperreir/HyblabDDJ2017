@@ -22,110 +22,123 @@
 
 
 <body>
-	<div class="sections row">
+	<div class="sections">
 
 		<!-- SECTION 1 : Intro, gender, age and residence area -->
 		<section id="section1_gender" >
-			<div class="row column">
+			<div class="row">
+				<div class="column small-12">
 
-				<div class="row column title">
-					<h3 class="text-center">Sélectionnez votre avatar</h3>
-				</div>
-
-				<div class="text-center row">
-					<div class="small-4 column"><p></p></div>
-					<!--
-					<div id="select_female" class="small-2 column"><img class="character" id="female" src="svg/shadow_female.svg"/></div>
-					<div id="select_male" class="small-2 column"><img class="character" id="male" src="svg/shadow_male.svg"/></div>
-					-->
-					<div id="select_female" class="small-2 column"><object type="image/svg+xml" class="character" id="female" data="svg/shadow_female.svg"></object></div>
-					<div id="select_male" class="small-2 column"><img class="character" id="male" src="svg/shadow_male.svg"/></div>
-					<div class="small-4 column"><p></p></div>
-				</div>
-
-				<div class="row nextButton">
-					<div class="small-2 small-offset-5 column">
-						<a id="toSection1_intro"><img src="svg/next2.svg"/></a>
+					<div class="row">
+						<div class="column small-12 text-center title">
+							<h3>Sélectionnez votre avatar</h3>
+						</div>
 					</div>
-				</div>
 
+					<div class="row">
+						<div class="column small-4"><p></p></div>
+						<div class="column small-2 text-center" id="select_female"><img class="character" id="female" src="svg/shadow_female.svg"/></div>
+						<div class="column small-2 text-center" id="select_male"><img class="character" id="male" src="svg/shadow_male.svg"/></div>
+						<div class="column small-4"><p></p></div>
+					</div>
+
+					<div class="row">
+						<div class="column small-2 small-offset-5 nextButton">
+							<a id="toSection1_intro"><img src="svg/next2.svg"/></a>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</section>
 
 
 		<section id="section1_intro">
-			<div class="row column">
+			<div class="row">
+				<div class="column small-12">
 
-				<div class="row column title">
-					<h3 class="text-center">Voyons quelle part de vos impôts</h3>
-					<h3 class="text-center">va aux projets de la ville !</h3>
-				</div>
-
-				<div class="text-center row">
-					<div class="small-5 column"><p></p></div>
-					<div class="small-2 column"><img class="section1_gender_img character"/></div>
-					<div class="small-5 column"><p></p></div>
-				</div>
-
-				<div class="row nextButton">
-					<div class="small-2 small-offset-5 column">
-						<a id="toSection1_age"><img src="svg/next2.svg"/></a>
+					<div class="row">
+						<div class="column small-12 text-center title">
+							<h3>Voyons quelle part de vos impôts</h3>
+							<h3>va aux projets de la ville !</h3>
+						</div>
 					</div>
-				</div>
 
+					<div class="row">
+						<div class="column small-5"><p></p></div>
+						<div class="column small-2 text-center"><img class="section1_gender_img character"/></div>
+						<div class="column small-5"><p></p></div>
+					</div>
+
+					<div class="row">
+						<div class="column small-2 small-offset-5 nextButton">
+							<a id="toSection1_age"><img src="svg/next2.svg"/></a>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</section>
 
 
 
 		<section id="section1_age">
-			<div class="row column">
-				
-				<div class="row column title">
-					<h3 class="text-center">Mais d'abord, quel âge avez-vous ?</h3>
-				</div>
+			<div class="row">
+				<div class="column small-12">
 
-				<div class="text-center row">
-					<div class="small-2 column"><p></p></div>
-					<div class="small-3 column bubbleAge"><input type="number" id="age"></div>
-					<div class="small-2 column"><img class="section1_gender_img character"/></div>
-					<div class="small-5 column"><p></p></div>
-				</div>
-
-
-				<div class="row nextButton">
-					<div class="small-2 small-offset-5 column">
-						<a id="toSection1_residence"><img src="svg/next2.svg"/></a>
+					<div class="row">
+						<div class="column small-12 text-center title">
+							<h3>Mais d'abord, quel âge avez-vous ?</h3>
+						</div>
 					</div>
-				</div>
 
+					<div class="row">
+						<div class="column small-2"><p></p></div>
+						<div class="column small-3 bubbleAge"><input type="number" id="age"></div>
+						<div class="column small-2 text-center"><img class="section1_gender_img character"/></div>
+						<div class="column small-5"><p></p></div>
+					</div>
+
+
+					<div class="row">
+						<div class="column small-2 small-offset-5 nextButton">
+							<a id="toSection1_residence"><img src="svg/next2.svg"/></a>
+						</div>
+					</div>
+
+				</div>	
 			</div>
 		</section>
 
 
 		<section id="section1_residence" >
-			<div class="row column">
+			<div class="row">
+				<div class="column small-12">
 
-				<div class="row column title">
-					<h3 class="text-center">Habitez-vous à Saint-nazaire ?</h3>
-				</div>
-
-				<div class="row">
-					<div class="small-2 column"><p></p></div>
-					<div class="small-3 column bubbleResidence">
-						<p><span><input type="radio" name="residence" value="yes">  Oui</span></p>
-						<p><span><input type="radio" name="residence" value="no">  Non</span></p>
+					<div class="row">
+						<div class="column small-12 text-center title">
+							<h3>Habitez-vous à Saint-nazaire ?</h3>
+						</div>
 					</div>
-					<div class="small-2 column text-center"><img class="section1_gender_img character"/></div>
-					<div class="small-5 column"><p></p></div>
-				</div>
 
-				<div class="row nextButton">
-					<div class="small-2 small-offset-5 column">
-						<a id="toSection2"><img src="svg/next2.svg"/></a>
+					<div class="row">
+						<div class="column small-2"><p></p></div>
+						<div class="column small-3 bubbleResidence">
+							<p><span><input type="radio" name="residence" value="yes">  Oui</span></p>
+							<p><span><input type="radio" name="residence" value="no">  Non</span></p>
+						</div>
+						<div class="column small-2 text-center"><img class="section1_gender_img character"/></div>
+						<div class="column small-5"><p></p></div>
 					</div>
-				</div>
 
+					<div class="row">
+						<div class="column small-2 small-offset-5 nextButton">
+							<a id="toSection2"><img src="svg/next2.svg"/></a>
+						</div>
+					</div>
+
+
+				</div>	
 			</div>
 		</section>
 
@@ -134,70 +147,68 @@
 
 		<!-- SECTION 2 : Talk with the mayor -->
 		<section id="section2">
-			<div class="row column">
+			<div class="row">
+				<div class="column small-12">
 
-				<div class="row column title">
-					<h3 class="text-center">Redistribution des impôts</h3>
-				</div>
-
-				<div class="row">
-					<div class="small-4 column">
-						<p></p>
-						<img id="bubble1" src="svg/bubble_1.svg"/>
-						<div id="bubble7" class="bubbleTaxesCost"><input type="number" id="taxesCost"></div>
-						<div id="bubble15" class="bubbleProjectsPart text-center">
-							<p>
-								<span><input type="radio" name="projectsPart" value="09">  09 %</span>
-								<span class="empty"></span>
-								<span><input type="radio" name="projectsPart" value="29">  29 %</span>
-							</p>
-							<p>
-								<span><input type="radio" name="projectsPart" value="49">  49 %</span>
-								<span class="empty"></span>
-								<span><input type="radio" name="projectsPart" value="69">  69 %</span>
-							</p>
+					<div class="row">
+						<div class="column small-12 text-center title">
+							<h3>Redistribution des impôts</h3>
 						</div>
 					</div>
-					<div class="small-2 column text-center"><img class="character section1_gender_img"/></div>
-					<div class="small-2 column text-center"><img class="character" src="svg/mayor.svg" /></div>
-					<div class="small-4 column">
-						<img id="bubble2" src="svg/bubble_2.svg" />
-						<img id="bubble3" src="svg/bubble_3.svg" />
-						<img id="bubble5" src="svg/bubble_5.svg" />
-						<img id="bubble4" src="svg/bubble_4.svg" />
-						<img id="bubble6" src="svg/bubble_6.svg" />
-						<img id="bubble8" src="svg/bubble_8.svg" />
-						<img id="bubble9" src="svg/bubble_9.svg" />
-						<img id="bubble10" src="svg/bubble_10.svg" />
-						<img id="bubble11" src="svg/bubble_11.svg" />
-						<img id="bubble12" src="svg/bubble_12.svg" />
-						<img id="bubble13" src="svg/bubble_13.svg" />
-						<img id="bubble14" src="svg/bubble_14.svg" />
-						<img id="bubble16" src="svg/bubble_16.svg" />
-						<p></p>
-					</div>
-				</div>
 
-				<div class="row column">
-					<input type="hidden" id="currentBubble" value="1">
-				</div>
-				
-				<div class="row nextButton">
-					<div class="small-2 small-offset-5 column">
-						<a id="nextBubble"><img src="svg/next2.svg"/></a>
+					<div class="row">
+						<div class="column small-4">
+							<p></p>
+							<img id="bubble1" src="svg/bubble_1.svg"/>
+							<div id="bubble7" class="bubbleTaxesCost"><input type="number" id="taxesCost"></div>
+							<div id="bubble15" class="bubbleProjectsPart text-center">
+								<p>
+									<span><input type="radio" name="projectsPart" value="09">  09 %</span>
+									<span class="empty"></span>
+									<span><input type="radio" name="projectsPart" value="29">  29 %</span>
+								</p>
+								<p>
+									<span><input type="radio" name="projectsPart" value="49">  49 %</span>
+									<span class="empty"></span>
+									<span><input type="radio" name="projectsPart" value="69">  69 %</span>
+								</p>
+							</div>
+						</div>
+						<div class="column small-2 text-center"><img class="character section1_gender_img"/></div>
+						<div class="column small-2 text-center"><img class="character" src="svg/mayor.svg" /></div>
+						<div class="column small-4">
+							<img id="bubble2" src="svg/bubble_2.svg" />
+							<img id="bubble3" src="svg/bubble_3.svg" />
+							<img id="bubble5" src="svg/bubble_5.svg" />
+							<img id="bubble4" src="svg/bubble_4.svg" />
+							<img id="bubble6" src="svg/bubble_6.svg" />
+							<img id="bubble8" src="svg/bubble_8.svg" />
+							<img id="bubble9" src="svg/bubble_9.svg" />
+							<img id="bubble10" src="svg/bubble_10.svg" />
+							<img id="bubble11" src="svg/bubble_11.svg" />
+							<img id="bubble12" src="svg/bubble_12.svg" />
+							<img id="bubble13" src="svg/bubble_13.svg" />
+							<img id="bubble14" src="svg/bubble_14.svg" />
+							<img id="bubble16" src="svg/bubble_16.svg" />
+							<p></p>
+						</div>
 					</div>
-				</div>
 
-			
+					<div class="row">
+						<div class="column small-12">
+							<input type="hidden" id="currentBubble" value="1">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="column small-2 small-offset-5 nextButton">
+							<a id="nextBubble"><img src="svg/next2.svg"/></a>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</section>
-
-
-
-
-
-
-
 
 	</div>
 
