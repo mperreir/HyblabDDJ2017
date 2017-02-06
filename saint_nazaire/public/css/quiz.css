@@ -4,6 +4,14 @@
 	height: 30vh;
 }
 
+.partie-haute{
+	background-color: white;
+}
+
+body{
+	background-color: #0E97E7;
+}
+
 .partie-basse{
 	padding-top: 2vh;
 	height: 62vh;
@@ -11,8 +19,15 @@
 	background-color: #0E97E7;
 }
 
-#titre-projet{
+.titre-projet{
 	margin-bottom: 30px;
+	color: white;
+}
+
+.estimation{
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	font-weight: 700;
 }
 
 h3{
@@ -20,7 +35,7 @@ h3{
 	font-weight: 700;
 }
 
-#contenu-projet{
+.contenu-projet{
 	padding: 5px;
 	background-color: ghostwhite;
 	border-radius: 5px;
@@ -30,7 +45,7 @@ h3{
 .slider-fill {
 	height: 20px;
 	border-radius: 10px;
-	background-color: black;
+	background-color: #17D8C9;
 }
 
 .slider{
@@ -40,11 +55,8 @@ h3{
 }
 
 .slider-handle{
-	width: 3em;
-	height: 6em;
-	font-family: 'Roboto', sans-serif;
 	background: url("/saint_nazaire/svg/hand.svg") no-repeat center 50px;
-	background-size: 2em;
+	font-family: 'Roboto', sans-serif;
 }
 
 .slider-handle:hover{
