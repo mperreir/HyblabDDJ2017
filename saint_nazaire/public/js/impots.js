@@ -14,7 +14,9 @@ $( document ).ready(function() {
 	$('#section1_intro').hide();
 	$('#section1_age').hide();
 	$('#section1_residence').hide();
-	$('#section2').hide();
+	$('#section2_prechart').hide();
+	$('#section2_chart').hide();
+	$('#section2_postchart').hide();
 
 	// hide bubbles
 	$('#bubble1').hide();
@@ -103,14 +105,14 @@ $( document ).ready(function() {
 
 		// if the user didn't select yes nor no we do not continue
 		if (choice != undefined) { 
-			scroll( $('#section1_residence') , $('#section2') ); 
+			scroll( $('#section1_residence') , $('#section2_prechart') ); 
 			$('#bubble1').show(BUBBLE_TIME_IN).addClass(BUBBLE_ANIM_IN);
 		}
 
 	});
 
 
-	$('#nextBubble').click(function() {
+	$('.nextBubble').click(function() {
 		
 		// number of the next bubble
 		var currentBubble = parseInt($('#currentBubble').val());
@@ -123,6 +125,94 @@ $( document ).ready(function() {
 });
 
 
+function drawChart(taxesCost) {
+
+
+	$.getJSON( "data/repartition_impots_2017.json", function( json ) {
+		
+		var fields = [];
+		var values = [];
+		var bgcolors = ["#FF6384","#4BC0C0","#FFCE56","#E7E9ED","#36A2EB","#A144FF","#FFA500"];
+		
+
+		// getting keys and values from the json object
+		for(var i in json) {
+			var key = i;
+			var val = parseFloat(json[i]);
+			fields.push(key);
+			values.push(Math.round(val*taxesCost*100)/100);
+		}
+
+		// data for the chart
+		var data = {
+			datasets: [{
+				data: values,
+				backgroundColor: "rgba(255,99,132,0.4)",
+				borderColor: "rgba(255,99,132,1)",
+				pointBackgroundColor: "rgba(255,99,132,1)",
+				pointBorderColor: "#fff",
+				pointHoverBackgroundColor: "#fff",
+				pointHoverBorderColor: "rgba(255,99,132,1)",
+				label: 'Répartition de vos impôts (€)' // for legend
+			}],
+			labels: fields
+
+		};
+
+		// creates the chart
+		var ctx = document.getElementById('myChart').getContext('2d');
+		var myChart = new Chart(ctx, {
+			data: data,
+			type: 'radar',
+			options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: "Répartition de vos impôts (€)",
+					fontColor: "#fff",
+					fontSize: 24,
+					fontFamily: "'Roboto', sans-serif",
+					position: "top",
+					padding: 10
+				},
+				legend: {
+					display: false
+				},
+				scale: {
+					ticks: {
+						beginAtZero: true,
+						//display: false
+						fontColor: "#000",
+						fontSize: 14,
+						fontFamily: "'Roboto', sans-serif",
+						backdropColor: "#fff",
+						maxTicksLimit: 6,
+						//showLabelBackdrop: false,
+						padding: 100
+					},
+					angleLines: {
+						display: true,
+						//color: "#000000"
+						lineWidth: 3
+					},
+					pointLabels: {
+						fontColor: "#ffffff",
+						fontSize: 18,
+						fontFamily: "'Roboto', sans-serif"
+					},
+					gridLines: {
+						offsetGridLines: true,
+						lineWidth: 3
+					}
+				}
+			}
+		});
+
+	});
+
+}
+
+
 
 function scroll(from, to) {
 	from.addClass("animated slideOutRight");
@@ -132,6 +222,8 @@ function scroll(from, to) {
 }
 
 function changeBubbleTo(no) {
+
+	console.log(no);
 
 	// hidding and showing the bubbles 
 	switch(no) {
@@ -155,11 +247,20 @@ function changeBubbleTo(no) {
 		// if no answer or illegal answer nothing happend
 		if (taxesCost != "" && parseInt(taxesCost) > 0) { 
 			$('#bubble6, #bubble7').removeClass(BUBBLE_ANIM_IN).addClass(BUBBLE_ANIM_OUT).hide(BUBBLE_TIME_OUT);
-			$('#bubble8').show(BUBBLE_TIME_IN).addClass(BUBBLE_ANIM_IN);
-			$('#currentBubble').val(8);    	
+			drawChart(parseInt(taxesCost));
+			scroll( $('#section2_prechart') , $('#section2_chart') ); 
+			$('#currentBubble').val(8); 	
 		}
 
 		break;
+
+
+	case 8:
+		scroll( $('#section2_chart') , $('#section2_postchart') ); 
+		$('#bubble9').show(BUBBLE_TIME_IN).addClass(BUBBLE_ANIM_IN);
+		$('#currentBubble').val(9);
+		break;
+
 
 
 	case 13:
@@ -179,6 +280,12 @@ function changeBubbleTo(no) {
 			$('#currentBubble').val(16);
 		}
 		
+		break;
+
+
+	case 16:
+		$('#currentBubble').val(1);
+		window.location.href = "index.html";
 		break;
 
 	default:
