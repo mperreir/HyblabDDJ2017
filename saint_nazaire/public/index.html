@@ -35,7 +35,6 @@
 document.getElementById("pageAccueil").addEventListener("load", function() {
 	var svg = this.contentDocument;
 	var jouer = svg.getElementById("titre").childNodes[7];
-	$(jouer).attr("title","testTeTitre");
 
 	$(jouer).hover(focus($(jouer)));
 	function focus(elem){
@@ -47,7 +46,7 @@ document.getElementById("pageAccueil").addEventListener("load", function() {
 			this.style.opacity = 1;
 		});
 		elem.click(function tester(){
-			window.location.href='impots.html';
+			window.location.href='../impots.html';
 		});
 	};
 });
