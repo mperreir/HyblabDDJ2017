@@ -146,7 +146,77 @@
 
 
 		<!-- SECTION 2 : Talk with the mayor -->
-		<section id="section2">
+		<section id="section2_prechart">
+			<div class="row">
+				<div class="column small-12">
+
+					<div class="row title">
+						<div class="column small-12 text-center">
+							<h3>Redistribution des impôts</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-4">
+							<img id="bubble1" src="svg/bubble_1.svg"/>
+							<div id="bubble7" class="bubbleTaxesCost"><input type="number" id="taxesCost"></div>
+							<p></p>
+						</div>
+						<div class="column small-2 text-center"><img class="character section1_gender_img"/></div>
+						<div class="column small-2 text-center"><img class="character" src="svg/mayor.svg" /></div>
+						<div class="column small-4">
+							<img id="bubble2" src="svg/bubble_2.svg" />
+							<img id="bubble3" src="svg/bubble_3.svg" />
+							<img id="bubble5" src="svg/bubble_5.svg" />
+							<img id="bubble4" src="svg/bubble_4.svg" />
+							<img id="bubble6" src="svg/bubble_6.svg" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-12">
+							<input type="hidden" id="currentBubble" value="1">
+						</div>
+					</div>
+					
+					<div class="row nextButton">
+						<div class="column small-2 small-offset-5">
+							<a class="nextBubble"><img src="svg/next2.svg"/></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="section2_chart">
+			<div class="row">
+				<div class="column small-12">
+
+					<div class="row title">
+						<div class="column small-12 text-center">
+							<h3>Redistribution des impôts</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-12">
+							<canvas id="myChart"></canvas>
+						</div>
+					</div>
+
+					<div class="row nextButton">
+						<div class="column small-2 small-offset-5">
+							<a class="nextBubble"><img src="svg/next2.svg"/></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<section id="section2_postchart">
 			<div class="row">
 				<div class="column small-12">
 
@@ -159,8 +229,6 @@
 					<div class="row">
 						<div class="column small-4">
 							<p></p>
-							<img id="bubble1" src="svg/bubble_1.svg"/>
-							<div id="bubble7" class="bubbleTaxesCost"><input type="number" id="taxesCost"></div>
 							<div id="bubble15" class="bubbleProjectsPart text-center">
 								<p>
 									<span><input type="radio" name="projectsPart" value="09">  09 %</span>
@@ -177,12 +245,6 @@
 						<div class="column small-2 text-center"><img class="character section1_gender_img"/></div>
 						<div class="column small-2 text-center"><img class="character" src="svg/mayor.svg" /></div>
 						<div class="column small-4">
-							<img id="bubble2" src="svg/bubble_2.svg" />
-							<img id="bubble3" src="svg/bubble_3.svg" />
-							<img id="bubble5" src="svg/bubble_5.svg" />
-							<img id="bubble4" src="svg/bubble_4.svg" />
-							<img id="bubble6" src="svg/bubble_6.svg" />
-							<img id="bubble8" src="svg/bubble_8.svg" />
 							<img id="bubble9" src="svg/bubble_9.svg" />
 							<img id="bubble10" src="svg/bubble_10.svg" />
 							<img id="bubble11" src="svg/bubble_11.svg" />
@@ -193,22 +255,17 @@
 							<p></p>
 						</div>
 					</div>
-
-					<div class="row">
-						<div class="column small-12">
-							<input type="hidden" id="currentBubble" value="1">
-						</div>
-					</div>
 					
 					<div class="row nextButton">
 						<div class="column small-2 small-offset-5">
-							<a id="nextBubble"><img src="svg/next2.svg"/></a>
+							<a class="nextBubble"><img src="svg/next2.svg"/></a>
 						</div>
 					</div>
 
 				</div>
 			</div>
 		</section>
+
 
 	</div>
 
@@ -222,6 +279,7 @@
 <script src="js/vendor/what-input.js"></script>
 <script src="js/vendor/foundation.js"></script>
 <script src="js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 
 <script src="js/impots.js"></script>
 

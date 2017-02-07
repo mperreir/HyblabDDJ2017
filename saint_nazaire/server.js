@@ -107,6 +107,14 @@ app.get("/utilisateurs/get/all", function(req, res){
     db.close();
 });
 
+app.get("/utilisateurs/get/lastid", function(req, res){
+    var db = new sqlite3.Database(quizdb_name);
+    db.get("SELECT ID as id FROM UTILISATEURS ORDER BY id DESC LIMIT 1", function(err, rows){
+        res.json(rows);
+    })
+    db.close();
+})
+
 app.get('/utilisateurs/get/:id', function(req, res){
     var db = new sqlite3.Database(quizdb_name);
     db.all("SELECT * FROM UTILISATEURS WHERE ID = ?", [req.params.id], function(err, rows){
