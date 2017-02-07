@@ -105,6 +105,28 @@ $( document ).ready(function() {
 
 		// if the user didn't select yes nor no we do not continue
 		if (choice != undefined) { 
+
+			// prepare ajax request to the database
+			var sexe = 1;
+			if ($('.section1_gender_img').attr('src') == "svg/shadow_male.svg") { sexe = 0 } // sexe 0 = H et 1 = F
+			var age = parseInt($('#age').val());
+			var stnazaire = 1;
+			if (choice == "no") { stnazaire = 0 } // saint-nazaire = 1 si habitant et 0 sinon
+			var ajaxRequest = "/saint_nazaire/utilisateurs/add?sexe=" + sexe + "&age=" + age + "&stnazaire=" + stnazaire;
+
+			
+			// request to the database and creation of the cookie
+			$.get(ajaxRequest, function(response) {
+				$.getJSON("/saint_nazaire/utilisateurs/get/lastid", function(json) {
+					var id = json[id];
+					var d = new Date();
+				    d.setTime(d.getTime() + (1000*24*60*60*1000));
+				    var expires = "expires="+ d.toUTCString();
+				    document.cookie = "stnazaire_id=" + id + ";" + expires + ";path=/";
+				});
+			});
+
+			// going to next section
 			scroll( $('#section1_residence') , $('#section2_prechart') ); 
 			$('#bubble1').show(BUBBLE_TIME_IN).addClass(BUBBLE_ANIM_IN);
 		}
