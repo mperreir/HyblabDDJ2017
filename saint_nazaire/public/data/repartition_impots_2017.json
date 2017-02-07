@@ -1,8 +1,8 @@
 {
-  	"Administration": "1000",
-  	"Espaces publics et projets": "1000",
-	"Culture, Sport, Tourisme": "1000",
-	"Patrimoine": "1000",
-	"Education": "1000",
-	"Services proximité": "1000"
+  	"Administration": "0.281",
+  	"Espaces publics et projets": "0.212",
+	"Culture, Sport, Tourisme": "0.174",
+	"Patrimoine": "0.150",
+	"Education": "0.112",
+	"Services proximité": "0.071"
 }

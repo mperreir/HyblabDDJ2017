@@ -28,7 +28,7 @@ section .title h3 {
 /* width of every character 
  *  if you don't reduce it takes all the column and it's needed to scroll to access the next button
 */
-section img.character {
+section .character {
 	width: 70%;
 }
 
@@ -67,8 +67,9 @@ section div.bubbleResidence p, section div.bubbleTaxesCost p {
 section .bubbleAge {
 	background-image: url("../svg/bubble_0.svg"); 
 	background-size: cover;
-	padding: 1% 1% 6.5% 1%;
+	padding: 1% 1% 1% 1%;
 	margin-top: 8%;
+	margin-bottom: 20%;
 }
 
 section .bubbleResidence {
