@@ -46,11 +46,18 @@ section input[type="radio"] {
 }
 
 /* number text input for bubbles */
-section input[type="number"] {
+section div.bubbleAge input[type="number"] {
+	margin: 3% 1% 1% 1%;
 	width: 90%;
-	margin: 0;
 	font-size:28px;
 }
+
+section div.bubbleTaxesCost input[type="number"] {
+	width: 80%;
+	font-size:28px;
+}
+
+
 
 section span {
 	font-size: 1.5em;
@@ -66,32 +73,27 @@ section div.bubbleResidence p, section div.bubbleTaxesCost p {
 
 section .bubbleAge {
 	background-image: url("../svg/bubble_0.svg"); 
-	background-size: cover;
+	background-repeat: no-repeat;
 	padding: 1% 1% 1% 1%;
 	margin-top: 8%;
-	margin-bottom: 20%;
 }
 
 section .bubbleResidence {
 	background-image: url("../svg/bubble_0.svg"); 
-	background-size: cover;
+	background-repeat: no-repeat;
 	padding: 1% 1% 1% 1%;
 	margin-top: 8%;
-	margin-bottom: 17%;
 }
 
 section .bubbleTaxesCost {
-	background-image: url("../svg/bubble_0.svg"); 
-	background-size: cover;
-	padding: 1% 1% 1% 1%;
-	margin-top: 8%;
-	margin-bottom: 20%;
+	background-image: url("../svg/bubble_0.svg");
+	background-repeat: no-repeat;
+	height: 35%;
+	padding: 3% 3% 1% 1%;
 }
 
 section .bubbleProjectsPart {
 	background-image: url("../svg/bubble_0.svg"); 
-	background-size: cover;
-	padding: 1% 1% 1% 1%;
-	margin-top: 8%;
-	margin-bottom: 17%;
-}
+	background-repeat: no-repeat;
+	height: 35%;
+	padding: 3% 3% 1% 1%;

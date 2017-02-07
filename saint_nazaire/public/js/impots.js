@@ -152,7 +152,6 @@ $( document ).ready(function() {
 
 function drawChart(taxesCost) {
 
-
 	$.getJSON( "data/repartition_impots_2017.json", function( json ) {
 		
 		var fields = [];
