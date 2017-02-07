@@ -1,6 +1,56 @@
-Site en construction :
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Carte interactive</title>
+	<!-- Basic viewport setting for mobile friendly page -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Déclaration de la feuille de style du document-->
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/accueil.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/foundation-icons.css">
 
-<ul>
-  <li><strong>Partie 1 : </strong><a href="/saint_nazaire/impots.html">Go</a></li>
-  <li><strong>Partie 2 : </strong><a href="/saint_nazaire/quiz">Go</a></li>
-</ul>
+</head>
+
+<body>
+	<div class="row expanded">
+		<div class="column small-12 accueil">
+			<object id="pageAccueil" data="./svg/home.svg" type="image/svg+xml"/>
+		</div>
+	</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+document.getElementById("pageAccueil").addEventListener("load", function() {
+	var svg = this.contentDocument;
+	var jouer = svg.getElementById("titre").childNodes[7];
+	$(jouer).attr("title","testTeTitre");
+
+	$(jouer).hover(focus($(jouer)));
+	function focus(elem){
+		elem.mouseenter(function enter(){
+			this.style.opacity=0.5;
+			this.style.cursor = "pointer";
+		});
+		elem.mouseleave(function exit(){
+			this.style.opacity = 1;
+		});
+		elem.click(function tester(){
+			window.location.href='impots.html';
+		});
+	};
+});
+</script>
+
+</html>
