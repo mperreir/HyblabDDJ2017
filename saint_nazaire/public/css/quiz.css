@@ -55,7 +55,9 @@ h3{
 }
 
 .slider-handle{
-	background: url("/saint_nazaire/svg/hand.svg") no-repeat center 50px;
+	width: 2em;
+    height: 5em;
+	background: url("/saint_nazaire/svg/main-01.svg") no-repeat center 35px;
 	font-family: 'Roboto', sans-serif;
 }
 
