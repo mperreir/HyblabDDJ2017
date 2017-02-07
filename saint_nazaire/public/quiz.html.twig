@@ -542,7 +542,22 @@
             }
         });
 
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
 
+        var userId = readCookie("stnazaire_id");
+
+        if (userId === null){
+            userId = 0;
+        }
 
         var numberProjects = 7;
 
@@ -566,7 +581,7 @@
         function launchEstimation(){
             $("#question-"+currentProject).toggle();
             var estimation = $("#question-"+currentProject).find("input").val();
-            $.get("/saint_nazaire/estimation/add?projet="+ currentProject +"&utilisateur=1&estimation="+estimation, function(data){
+            $.get("/saint_nazaire/estimation/add?projet="+ currentProject +"&utilisateur="+userId+"&estimation="+estimation, function(data){
                 if (data === "OK"){
                     $.getJSON("/saint_nazaire/estimation/get/counted/"+currentProject, function(data2){
                         $("#result-"+currentProject).toggle();
@@ -583,6 +598,9 @@
                                 }]
                             },
                             options: {
+                                legend:{
+                                    display: false
+                                },
                                 title: {
                                     display: true,
                                     text: "Répartitions des estimations des internautes",
