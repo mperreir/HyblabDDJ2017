@@ -125,6 +125,9 @@ $( document ).ready(function() {
 });
 
 
+// ----------------------------------------------------------------------------------------------
+
+
 function drawChart(taxesCost) {
 
 
@@ -132,8 +135,6 @@ function drawChart(taxesCost) {
 		
 		var fields = [];
 		var values = [];
-		var bgcolors = ["#FF6384","#4BC0C0","#FFCE56","#E7E9ED","#36A2EB","#A144FF","#FFA500"];
-		
 
 		// getting keys and values from the json object
 		for(var i in json) {
@@ -262,7 +263,6 @@ function changeBubbleTo(no) {
 		break;
 
 
-
 	case 13:
 		$('#bubble13').removeClass(BUBBLE_ANIM_IN).addClass(BUBBLE_ANIM_OUT).hide(BUBBLE_TIME_OUT);
 		$('#bubble14, #bubble15').show(BUBBLE_TIME_IN).addClass(BUBBLE_ANIM_IN);
@@ -285,7 +285,7 @@ function changeBubbleTo(no) {
 
 	case 16:
 		$('#currentBubble').val(1);
-		window.location.href = "index.html";
+		window.location.href = "quiz";
 		break;
 
 	default:
