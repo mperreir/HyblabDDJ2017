@@ -75,19 +75,23 @@ section .bubbleAge {
 section .bubbleResidence {
 	background-image: url("../svg/bubble_0.svg"); 
 	background-size: cover;
-	padding: 2% 0% 2.5% 5%;
+	padding: 1% 1% 1% 1%;
 	margin-top: 8%;
+	margin-bottom: 17%;
 }
 
 section .bubbleTaxesCost {
 	background-image: url("../svg/bubble_0.svg"); 
 	background-size: cover;
-	padding: 2% 2% 30% 2%;
+	padding: 1% 1% 1% 1%;
 	margin-top: 8%;
+	margin-bottom: 20%;
 }
 
 section .bubbleProjectsPart {
 	background-image: url("../svg/bubble_0.svg"); 
 	background-size: cover;
-	padding: 10% 0% 4% 0%;
+	padding: 1% 1% 1% 1%;
+	margin-top: 8%;
+	margin-bottom: 17%;
 }
