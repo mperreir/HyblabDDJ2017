@@ -136,6 +136,8 @@ $( document ).ready(function() {
 
 	$('.nextBubble').click(function() {
 		
+		console.log("Next !");
+		
 		// number of the next bubble
 		var currentBubble = parseInt($('#currentBubble').val());
 
