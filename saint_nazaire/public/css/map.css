@@ -21,6 +21,23 @@ h2
    cursor: pointer;
 }
 
+#boutonCredits
+{
+   position: absolute;
+   top: 70vh;
+   right:5vh;
+   font-weight : bold;
+   border:2px solid black;
+   padding:5px;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+#boutonCredits:hover
+{
+   background-color: #549E00;
+}
+
 #boutonRetour:hover
 {
    background-color: #549E00;

@@ -20,6 +20,7 @@
 	<div class="row expanded">
 		<div class="column small-12">
 			<button type="button" id="boutonRetour">Retour</button>
+			<button type="button" id="boutonCredits">Crédits</button>
 			<object id="mapStNazaire" data="./svg/map st nazaire-01.svg" type="image/svg+xml"/> 
 		</div>
 	</div>
@@ -210,6 +211,10 @@
 			$("#boutonRetour").click(function retour(){
 				window.location = "./quiz";
 			});
+
+			$("#boutonCredits").click(function(){
+				window.location = "./credits.html";
+			})
 		});
 	</script>
 </body>
