@@ -269,7 +269,7 @@ function changeBubbleTo(no) {
 		var taxesCost = $('#taxesCost').val();
 
 		// if no answer or illegal answer nothing happend
-		if (taxesCost != "" && parseInt(taxesCost) > 0) { 
+		if (taxesCost != "" && parseInt(taxesCost) >= 0) { 
 			$('#bubble6, #bubble7').removeClass(BUBBLE_ANIM_IN).addClass(BUBBLE_ANIM_OUT).hide(BUBBLE_TIME_OUT);
 			drawChart(parseInt(taxesCost));
 			scroll( $('#section2_prechart') , $('#section2_chart') ); 
