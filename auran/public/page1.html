@@ -1,0 +1,161 @@
+<script src="js/motherboard.js" defer></script>
+<script>
+    function animateBuildings(){
+        var buildings = $('.building');
+        buildings.addClass('show');
+        buildings.each(function(i, building) {
+            console.log("image:"+building);
+            building.addEventListener("mouseover", function(){
+                var image = building.src;
+                image = image.replace("off", "on");
+                console.log("over: image="+image);
+                building.src=image;
+            });
+            building.addEventListener("mouseout", function(){
+                var image = building.src;
+                image = image.replace("on", "off");
+                console.log("out: image="+image);
+                building.src=image;
+            });
+        });
+
+        /*
+        var time=0;
+        var i=0;
+        var buildings = $('.building');
+        for(i=0;i<buildings.length;i++){
+            setTimeout(
+                function()
+                {
+                    //do something special
+                    buildings[i].addClass('show');
+                }, time);
+            time+=1000;
+        }
+        */
+    }
+
+</script>
+
+<style>
+    .town{
+        display: inline-block;
+        height: 100%;
+        width: auto;
+        position: relative;
+    }
+    .container_town{
+        height: 100%;
+        overflow: hidden;
+    }
+    .town-img{
+        /*
+            margin-top is (100 - height)/2
+         */
+        margin-top: 40%;
+        height: 54%;
+    }
+    .building{
+        position: absolute;
+        top: -3000px;
+        left: 0;
+        transition: all 2s ease;
+    }
+    .b1.show {
+        height: 45%;
+        top:3%;
+        left: 50%;
+    }
+    .b2.show {
+        height: 36%;
+        top:17%;
+        left: 37%;
+    }
+    .b3.show {
+        height: 45%;
+        top:11%;
+        left: 26%;
+    }
+    .b4.show {
+        height: 27%;
+        top:25%;
+        left: 60%;
+    }
+    .b5.show {
+        height: 27%;
+        top:32%;
+        left: 56.5%;
+    }
+    .b6.show {
+        height: 27%;
+        top:34%;
+        left: 47%;
+    }
+    .b7.show {
+        height: 27%;
+        top:30%;
+        left: 18%;
+    }
+    .b8.show {
+        height: 27%;
+        top:32%;
+        left: 10%;
+    }
+    .b9.show {
+        height: 36%;
+        top:29%;
+        left: 31%;
+    }
+    .b10.show {
+        height: 18%;
+        top:46%;
+        left: 20%;
+    }
+    .b11.show {
+        height: 18%;
+        top:41%;
+        left: 80%;
+    }
+    .b12.show {
+        height: 13%;
+        top:49%;
+        left: 73.5%;
+    }
+    .b13.show {
+        height: 18%;
+        top:48%;
+        left: 64%;
+    }
+    .b14.show {
+        height: 27%;
+        top:44%;
+        left: 50%;
+    }
+    .b15.show {
+        height: 13%;
+        top:59%;
+        left: 42%;
+    }
+
+</style>
+<div class="container_town">
+    <div class="town">
+        <img class="town-img" src="img/plateau.svg"/>
+        <img class="building b1" src="img/quartier/bat/bat1/off.png"/>
+        <img class="building b2" src="img/quartier/bat/bat2/off.png"/>
+        <img class="building b3" src="img/quartier/bat/bat3/off.png"/>
+        <img class="building b4" src="img/quartier/bat/bat4/off.png"/>
+        <img class="building b5" src="img/quartier/bat/bat5/off.png"/>
+        <img class="building b6" src="img/quartier/bat/bat6/off.png"/>
+        <img class="building b7" src="img/quartier/bat/bat7/off.png"/>
+        <img class="building b8" src="img/quartier/bat/bat8/off.png"/>
+        <img class="building b9" src="img/quartier/bat/bat9/off.png"/>
+        <img class="building b10" src="img/quartier/bat/bat10/off.png"/>
+        <img class="building b11" src="img/quartier/bat/bat11/off.png"/>
+        <img class="building b12" src="img/quartier/bat/bat12/off.png"/>
+        <img class="building b13" src="img/quartier/bat/bat13/off.png"/>
+        <img class="building b14" src="img/quartier/bat/bat14/off.png"/>
+        <img class="building b15" src="img/quartier/bat/bat15/off.png"/>
+
+    </div>
+</div>

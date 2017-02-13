@@ -1,14 +1,22 @@
+/**
+ * Created by ant on 03/02/17.
+ */
+
 'use strict';
 
 // No need for window.onload event here since we are using the def attribute
 // when loading our scripts
 
 // Load a dummy json file using the fetch API
-fetch('data/dummy.json')
-    // this promise will be fulfilled when the json fill will be
+fetch('data/numeric_shares.json')
+// this promise will be fulfilled when the json fill will be
     .then(function (response){
         // if we could load the resource, parse it
-        section1
+        if( response.ok )
+            return response.json();
+        else // if not, send some error message as JSON data
+            return {data: "JSON file not found"};
+
     })
     // in case of invalid JSON (parse error) send some error message as JSON data
     .catch( function (error){
@@ -16,6 +24,7 @@ fetch('data/dummy.json')
     })
     // this promise will be fulfilled when the json will be parsed
     .then(function (json) {
-        document.querySelector('#data')
-            .textContent = json.data;
+        var pourcentage_big = json.pourcentage_big;
+        var pourcentage_small = json.pourcentage_small;
+        //completeMotherBoard(pourcentage_small, pourcentage_big)
     });
