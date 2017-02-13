@@ -1,0 +1,127 @@
+<script src="js/motherboard.js" defer></script>
+<script>
+    function animateComponents(){
+        setTimeout(
+            function()
+            {
+                //do something special
+                $('.ge_big').addClass('show');
+            }, 3000);
+        $('.ge_small').addClass('show');
+    }
+
+</script>
+
+<style>
+    .platform{
+        display: inline-block;
+        height: 100%;
+        width: auto;
+        position: relative;
+    }
+    .container_platform{
+        height: 100%;
+        overflow: hidden;
+    }
+    .platform-img{
+        /*
+            margin-top is (100 - height)/2
+         */
+        margin-top: 15%;
+        height: 70%;
+    }
+    .ge{
+        height: 30%;
+        position: absolute;
+        top: -3000px;
+        left: 0;
+        transition: all 2s ease;
+    }
+    .ge_small{
+        height: 10%;
+        position: absolute;
+        top: -3000px;
+        left: 0;
+        transition: all 2s ease;
+    }
+    .ge_01.show {
+        top:16%;
+        left: 60%;
+        z-index: 10;
+    }
+    .ge_02.show {
+        top:30%;
+        left: 5%;
+        z-index: 10;
+    }
+    .ge_03.show {
+        top:40%;
+        left: 40%;
+        z-index: 10;
+    }
+    .ge_04.show {
+        top:57%;
+        left: 62%;
+    }
+    .ge_05.show {
+        top:35%;
+        left: 20%;
+    }
+    .ge_06.show {
+        top:26%;
+        left: 42%;
+    }
+    .ge_07.show {
+        top:60%;
+        left: 25%;
+    }
+    .ge_08.show {
+        top:45%;
+        left: 80%;
+    }
+    .ge_09.show {
+        top:16%;
+        left: 45%;
+    }
+    .ge_10.show {
+        top:33%;
+        left: 55%;
+    }
+    .ge_11.show {
+        top:30%;
+        left: 36.5%;
+    }
+    .ge_12.show {
+        top:53%;
+        left: 70%;
+    }
+    .ge_13.show {
+        top:38%;
+        left: 35%;
+    }
+    .ge_14.show {
+        top:50%;
+        left: 30%;
+    }
+
+
+</style>
+<div class="container_platform">
+    <div class="platform">
+        <img class="platform-img" src="img/platform.png"/>
+        <img class="ge ge_01 ge_big" src="img/ge/ge_01.png"/>
+        <img class="ge ge_02 ge_big" src="img/ge/ge_02.png"/>
+        <img class="ge ge_03 ge_big" src="img/ge/ge_03.png"/>
+        <img class="ge ge_04 ge_small" src="img/me/micro_01.png"/>
+        <img class="ge ge_05 ge_small" src="img/me/micro_02.png"/>
+        <img class="ge ge_06 ge_small" src="img/me/micro_03.png"/>
+        <img class="ge ge_07 ge_small" src="img/me/micro_04.png"/>
+        <img class="ge ge_08 ge_small" src="img/me/micro_05.png"/>
+        <img class="ge ge_09 ge_small" src="img/me/micro_06.png"/>
+        <img class="ge ge_10 ge_small" src="img/me/micro_07.png"/>
+        <img class="ge ge_11 ge_small" src="img/me/micro_08.png"/>
+        <img class="ge ge_12 ge_small" src="img/me/micro_09.png"/>
+        <img class="ge ge_13 ge_small" src="img/me/micro_10.png"/>
+        <img class="ge ge_14 ge_small" src="img/me/micro_11.png"/>
+    </div>
+</div>
