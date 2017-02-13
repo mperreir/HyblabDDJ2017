@@ -1,0 +1,81 @@
+{
+  "year": 2015,
+  "total_company_count": 612,
+  "numeric": [
+    {
+      "name": "Conseil en système et logiciel informatique",
+      "company_count": 260,
+      "jobs": 11343
+    },
+    {
+      "name": "Edition de logiciels d’applicatifs",
+      "company_count": 64,
+      "jobs": 1483
+    },
+    {
+      "name": "Programmation informatique",
+      "company_count": 139,
+      "jobs": 1597
+    },
+    {
+      "name": "Edition de logiciels système et de réseau",
+      "company_count": 11,
+      "jobs": 129
+    },
+    {
+      "name": "Gestion d’installations informatiques",
+      "company_count": 13,
+      "jobs": 398
+    },
+    {
+      "name": "Autres activités de télécommunication",
+      "company_count": 16,
+      "jobs": 235
+    },
+    {
+      "name": "Télécommunication filaires",
+      "company_count": 17,
+      "jobs": 2362
+    },
+    {
+      "name": "Autres activités informatiques",
+      "company_count": 19,
+      "jobs": 862
+    },
+    {
+      "name": "Traitement des données, hébergement et activités connexes",
+      "company_count": 40,
+      "jobs": 665
+    },
+    {
+      "name": "Télécommunication sans fil",
+      "company_count": 8,
+      "jobs": 961
+    },
+    {
+      "name": "Portails internet",
+      "company_count": 7,
+      "jobs": 74
+    },
+    {
+      "name": "Edition de jeux électroniques",
+      "company_count": 0,
+      "jobs": 0
+    },
+    {
+      "name": "Edition de logiciels d’outils de développement et de langage",
+      "company_count": 2,
+      "jobs": 9
+    },
+    {
+      "name": "Tierce maintenance de systèmes et d’applications",
+      "company_count": 16,
+      "jobs": 627
+    },
+    {
+      "name": "Télécommunication satellite",
+      "company_count": 0,
+      "jobs": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "5821Z" : { "libelle" : "Édition de jeux électroniques" , "nb_entreprise" : 0, "nb_employe" : 0},
+  "5829A" : { "libelle" : "Édition de logiciels système et de réseau" , "nb_entreprise" : 11, "nb_employe" : 129},
+  "5829B" : { "libelle" : "Édition de logiciels outils de développement et de langages" , "nb_entreprise" : 2, "nb_employe" : 9},
+  "5829C" : { "libelle" : "Édition de logiciels applicatifs" , "nb_entreprise" : 64, "nb_employe" : 1483},
+  "6110Z" : { "libelle" : "Télécommunications filaires" , "nb_entreprise" : 17, "nb_employe" : 2362},
+  "6120Z" : { "libelle" : "Télécommunications sans fil" , "nb_entreprise" : 8, "nb_employe" : 961},
+  "6130Z" : { "libelle" : "Télécommunications par satellite" , "nb_entreprise" : 0, "nb_employe" : 0},
+  "6190Z" : { "libelle" : "Autres activités de télécomunications" , "nb_entreprise" : 16, "nb_employe" : 235},
+  "6201Z" : { "libelle" : "Programmation informatique" , "nb_entreprise" : 139, "nb_employe" : 1597},
+  "6202A" : { "libelle" : "Conseil en systèmes et logiciels informatique" , "nb_entreprise" : 260, "nb_employe" : 11343},
+  "6202B" : { "libelle" : "Tierce maintenance de systèmes et d'applications informatiques" , "nb_entreprise" : 16, "nb_employe" : 627},
+  "6203Z" : { "libelle" : "Gestion d'installations informatiques" , "nb_entreprise" : 13, "nb_employe" : 398},
+  "6209Z" : { "libelle" : "Autres activités informatiques" , "nb_entreprise" : 19, "nb_employe" : 862},
+  "6311Z" : { "libelle" : "Traitement de données, hébergement et activités connexes" , "nb_entreprise" : 40, "nb_employe" : 665},
+  "6312Z" : { "libelle" : "Portails Internet" , "nb_entreprise" : 7, "nb_employe" : 74}
+}
