@@ -1,0 +1,319 @@
+<script src="js/motherboard.js" defer></script>
+<script>
+    function ColorLuminance(hex, lum) {
+        // validate hex string
+        hex = String(hex).replace(/[^0-9a-f]/gi, '');
+        if (hex.length < 6) {
+            hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+        }
+        lum = lum || 0;
+
+        // convert to decimal and change luminosity
+        var rgb = "#", c, i;
+        for (i = 0; i < 3; i++) {
+            c = parseInt(hex.substr(i*2,2), 16);
+            c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+            rgb += ("00"+c).substr(c.length);
+        }
+
+        return rgb;
+    }
+
+    function smallCompaniesAnimation(pourcentageSmall, pourcentageBig){
+        var entreprisesIndividuelles = $('.entreprises-individuelles');
+        var small_companies_share = document.querySelector('#small_companies_share');
+        $('.ge_small').slice(0, pourcentageSmall/10).addClass('show');
+
+        for(i=0;i<=pourcentageSmall;i++){
+            console.log("next time: "+(i*1000));
+            setTimeout(
+                function(index) {
+                    console.log("display: "+index);
+                    small_companies_share.textContent = index+"%";
+                    if(index==pourcentageSmall){
+                        bigCompaniesAnimation(pourcentageBig);
+                    }
+                }, i*50, i);
+            setTimeout(function(index) {
+                entreprisesIndividuelles.css("background-color", ColorLuminance("#342756", -index/150));
+            }, i*10, i);
+        }
+    }
+
+    function bigCompaniesAnimation(pourcentageBig){
+        var grandesEntreprises = $('.grandes-entreprises');
+        var big_companies_share = document.querySelector('#big_companies_share');
+        $('.ge_big').slice(0, pourcentageBig/10).addClass('show');
+        for(i=0;i<=pourcentageBig;i++){
+            console.log("next time: "+(i*1000));
+            setTimeout(function(index) {
+                console.log("display: "+index);
+                big_companies_share.textContent = index+"%";
+            }, i*100, i);
+
+            setTimeout(function(index) {
+                grandesEntreprises.css("background-color", ColorLuminance("#140F21", -index/150));
+            }, i*10, i);
+        }
+    }
+
+    function animateComponents(){
+        fetch('data/numeric_shares.json')
+        // this promise will be fulfilled when the json fill will be
+            .then(function (response){
+                // if we could load the resource, parse it
+                if( response.ok )
+                    return response.json();
+                else // if not, send some error message as JSON data
+                    return {data: "JSON file not found"};
+
+            })
+            // in case of invalid JSON (parse error) send some error message as JSON data
+            .catch( function (error){
+                console.log("error: "+error);
+                return {data: "Invalid JSON"};
+            })
+            // this promise will be fulfilled when the json will be parsed
+            .then(function (json) {
+                var pourcentageBig=json["pourcentage_big"];
+                var pourcentageSmall=json["pourcentage_small"];
+                var big_companies_share = document.querySelector('#big_companies_share');
+                var i;
+                var grandesEntreprises = $('.grandes-entreprises');
+                smallCompaniesAnimation(pourcentageSmall, pourcentageBig);
+                /*
+                console.log("pourcentageBig="+pourcentageBig);
+                $('.ge_big').slice(0, pourcentageSmall/10).addClass('show');
+                for(i=0;i<=pourcentageBig;i++){
+                    console.log("next time: "+(i*1000));
+                    setTimeout(function(index) {
+                            console.log("display: "+index);
+                            big_companies_share.textContent = index;
+                            if(index==pourcentageBig){
+                                smallCompaniesAnimation(pourcentageSmall);
+                            }
+                        }, i*100, i);
+
+                    setTimeout(function(index) {
+                        grandesEntreprises.css("background-color", ColorLuminance("#140F21", -index/150));
+                    }, i*10, i);
+                }
+                */
+            });
+    }
+
+</script>
+
+<style>
+    .platform{
+        display: inline-block;
+        height: 100%;
+        margin-left: 20%;
+        width: auto;
+        position: relative;
+    }
+    .container_platform{
+        height: 100%;
+        overflow: hidden;
+    }
+    .platform-img{
+        /*
+            margin-top is (100 - height)/2
+         */
+        margin-top: 15%;
+        height: 70%;
+    }
+    .ge{
+        height: 30%;
+        position: absolute;
+        top: -3000px;
+        left: 0;
+        transition: all 2s ease;
+    }
+    .ge_small{
+        height: 10%;
+        position: absolute;
+        top: -3000px;
+        left: 0;
+        transition: all 2s ease;
+    }
+    .ge_01.show {
+        top:16%;
+        left: 60%;
+        z-index: 10;
+    }
+    .ge_02.show {
+        top:30%;
+        left: 5%;
+        z-index: 10;
+    }
+    .ge_03.show {
+        top:40%;
+        left: 40%;
+        z-index: 10;
+    }
+    .ge_04.show {
+        top:57%;
+        left: 62%;
+    }
+    .ge_05.show {
+        top:35%;
+        left: 20%;
+    }
+    .ge_06.show {
+        top:26%;
+        left: 42%;
+    }
+    .ge_07.show {
+        top:60%;
+        left: 25%;
+    }
+    .ge_08.show {
+        top:45%;
+        left: 80%;
+    }
+    .ge_09.show {
+        top:16%;
+        left: 45%;
+    }
+    .ge_10.show {
+        top:33%;
+        left: 55%;
+    }
+    .ge_11.show {
+        top:30%;
+        left: 36.5%;
+    }
+    .ge_12.show {
+        top:53%;
+        left: 70%;
+    }
+    .ge_13.show {
+        top:38%;
+        left: 35%;
+    }
+    .ge_14.show {
+        top:50%;
+        left: 30%;
+    }
+
+    .text-fond{
+        position: absolute;
+        object-fit: fill;
+        width:100%;
+        height: 100vh;
+    }
+
+    .entreprises-individuelles{
+        width:60%;
+        background-color: #342756;
+        float:left;
+        height: 100vh;
+    }
+
+    .entreprises-individuelles h1, .grandes-entreprises h1{
+        margin-top: 0.1em;
+        font-size: 5em;
+    }
+
+    .entreprises-individuelles h2, .grandes-entreprises h2{
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+    .grandes-entreprises{
+        width:40%;
+        float:left;
+        height: 100vh;
+        background-color: #140F21;
+    }
+
+    .text-entreprises-bottom{
+        position:absolute;
+        bottom:0;
+    }
+
+    .text-entreprises-left{
+        text-align: left;
+        max-width:45vw;
+        margin-left: 4vw;
+    }
+
+    .text-entreprises-right {
+        text-align: right;
+        max-width: 20vw;
+        margin-right: 4vw;
+        position: absolute;
+        right:0;
+    }
+
+    .text-entreprises-bottom p {
+        font-family: 'Raleway', sans-serif;
+        border-top: solid 1px #ade2e7;
+    }
+
+    .text-entreprises-decor{
+        font-size: 1.2em;
+        font-family: 'Raleway', sans-serif;
+    }
+</style>
+<div class="container_platform" id="carte-mere">
+    <div class="text-fond">
+        <div class="entreprises-individuelles">
+            <h1 id="small_companies_share">_</h1>
+            <h2>des entreprises du numériques sont individuelles.</h2>
+            <p class="text-entreprises-left text-entreprises-decor">
+                Sur le territoire nantais, l’écosystème numérique se caractérise par des
+                disparités fortes (en taille et en structure de l’emploi, notamment), mais
+                avant tout par des interactions denses entre les nombreux acteurs.
+            </p>
+            <div class="text-entreprises-bottom text-entreprises-left">
+                <p>
+                    Les entreprises individuelles représentent plus de <b>deux tiers</b>
+                    des entreprises du <b>numérique</b> à Nantes Métropole.
+                </p>
+                <p>
+                    Les <b>secteurs porteurs d’emplois</b> à Nantes en 2015 sont <i>le conseil en
+                    système et logiciels informatiques</i>, <i>la programmation informatique</i>
+                    et <i>l’édition de logiciels d’applicatifs</i>.
+                </p>
+                <p>
+                    Une dynamique propre à Nantes en 2015 : des grandes entreprises beaucoup plus <b>porteuses
+                    d’emplois</b> que les entreprises indépendantes, <b>pourtant plus nombreuses</b>.
+                </p>
+            </div>
+        </div>
+        <div class="grandes-entreprises">
+            <h1 id="big_companies_share">_</h1>
+            <h2>sont des entreprises avec des salariés.</h2>
+            <div class="text-entreprises-bottom text-entreprises-right">
+                <p>Sources : AURAN, Nantes Tech, Acoss 2016 et INSEE Sirene 2016</p>
+            </div>
+            <!--
+            <div class="social-media">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="SpokaLab" data-hashtags="Hyblab"></a>
+                <div class="fb-share-button" data-href="http://bit.ly/2jK2Yqj" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhttp://bit.ly/2kYNp2S&amp;src=sdkpreparse">Partager</a></div>
+                <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://bit.ly/2jK2Yqj"></div>
+            </div>
+            -->
+        </div>
+
+    </div>
+    <div class="platform">
+        <img class="platform-img" src="img/platform.png"/>
+        <img class="ge ge_01 ge_big" src="img/ge/ge_01.png"/>
+        <img class="ge ge_02 ge_big" src="img/ge/ge_02.png"/>
+        <img class="ge ge_03 ge_big" src="img/ge/ge_03.png"/>
+        <img class="ge ge_04 ge_small" src="img/me/micro_01.png"/>
+        <img class="ge ge_05 ge_small" src="img/me/micro_02.png"/>
+        <img class="ge ge_06 ge_small" src="img/me/micro_03.png"/>
+        <img class="ge ge_07 ge_small" src="img/me/micro_04.png"/>
+        <img class="ge ge_08 ge_small" src="img/me/micro_05.png"/>
+        <img class="ge ge_09 ge_small" src="img/me/micro_06.png"/>
+        <img class="ge ge_10 ge_small" src="img/me/micro_07.png"/>
+        <img class="ge ge_11 ge_small" src="img/me/micro_08.png"/>
+        <img class="ge ge_12 ge_small" src="img/me/micro_09.png"/>
+        <img class="ge ge_13 ge_small" src="img/me/micro_10.png"/>
+        <img class="ge ge_14 ge_small" src="img/me/micro_11.png"/>
+    </div>
+</div>

@@ -1,0 +1,315 @@
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,600,700" rel="stylesheet">
+<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'fr'}</script>
+<script src="js/motherboard.js" defer></script>
+<script>
+    function animateBuildings(){
+
+        fetch('data/sector.json')
+        // this promise will be fulfilled when the json fill will be
+            .then(function (response){
+                // if we could load the resource, parse it
+                if( response.ok )
+                    return response.json();
+                else // if not, send some error message as JSON data
+                    return {data: "JSON file not found"};
+
+            })
+            // in case of invalid JSON (parse error) send some error message as JSON data
+            .catch( function (error){
+                console.log("error: "+error);
+                return {data: "Invalid JSON"};
+            })
+            // this promise will be fulfilled when the json will be parsed
+            .then(function (json) {
+                var sectorList = [];
+                for (var i = 0; i < json.numeric.length; i++) {
+                    sectorList.push(json.numeric[i]);
+                    sectorList.sort(function(a, b) {
+                        return b["company_count"] - a["company_count"];
+                    });
+                }
+                var i=0;
+                var buildings = $('.building');
+                sectorList.forEach(function(sector){
+                    var building = buildings[i];
+                    console.log("sector:" +sector["company_count"]);
+                    console.log("sector: id=" +building.id);
+                    if(sector["company_count"]>0){
+                        $('#'+building.id).addClass('show');
+                        console.log("image:"+building);
+                        building.addEventListener("mouseover", function(){
+                            var image = building.src;
+                            image = image.replace("off", "on");
+                            console.log("over: "+sector["name"]);
+                            building.src=image;
+                            document.querySelector('#sector_name').textContent = sector["name"];
+                            document.querySelector('#sector_companies').textContent = sector["company_count"];
+                            document.querySelector('#sector_jobs').textContent = sector["jobs"];
+                        });
+                        building.addEventListener("mouseout", function(){
+                            var image = building.src;
+                            image = image.replace("on", "off");
+                            console.log("out: "+sector["name"]);
+                            building.src=image;
+                        });
+                        i++;
+                    }
+                });
+                /*
+                 var buildings = $('.building');
+                 buildings.addClass('show');
+                 buildings.each(function(i, building) {
+                 console.log("image:"+building);
+                 building.addEventListener("mouseover", function(){
+                 var image = building.src;
+                 image = image.replace("off", "on");
+                 console.log("over: image="+image);
+                 building.src=image;
+                 });
+                 building.addEventListener("mouseout", function(){
+                 var image = building.src;
+                 image = image.replace("on", "off");
+                 console.log("out: image="+image);
+                 building.src=image;
+                 });
+                 });
+                 */
+            });
+
+
+        /*
+         var time=0;
+         var i=0;
+         var buildings = $('.building');
+         for(i=0;i<buildings.length;i++){
+         setTimeout(
+         function()
+         {
+         //do something special
+         buildings[i].addClass('show');
+         }, time);
+         time+=1000;
+         }
+         */
+    }
+
+</script>
+
+<style>
+    .town{
+        display: inline-block;
+        height: 100%;
+        width: auto;
+        position: relative;
+        margin: 5%;
+    }
+    .container_town{
+        position: absolute;
+        height: 100%;
+        width: 60%;
+        overflow: hidden;
+        float:left;
+        z-index: 5;
+    }
+    .sector_info{
+        float: right;
+        position: relative;
+        color:red;
+        width: 100%;
+        margin: 5% 5% 0 0;
+        text-align: justify;
+    }
+
+    .sector_info .source {
+        margin : 2% 5% 0% 65%;
+    }
+
+    .town-img{
+        /*
+            margin-top is (100 - height)/2
+         */
+        margin-top: 40%;
+        height: 54%;
+    }
+    .building{
+        position: absolute;
+        top: -3000px;
+        left: 0;
+        transition: all 2s ease;
+    }
+    .b1.show {
+        height: 45%;
+        top:3%;
+        left: 50%;
+    }
+    .b2.show {
+        height: 36%;
+        top:17%;
+        left: 37%;
+    }
+    .b3.show {
+        height: 45%;
+        top:11%;
+        left: 26%;
+    }
+    .b4.show {
+        height: 27%;
+        top:25%;
+        left: 60%;
+    }
+    .b5.show {
+        height: 27%;
+        top:32%;
+        left: 56.5%;
+    }
+    .b6.show {
+        height: 27%;
+        top:34%;
+        left: 47%;
+    }
+    .b7.show {
+        height: 27%;
+        top:30%;
+        left: 18%;
+    }
+    .b8.show {
+        height: 27%;
+        top:32%;
+        left: 10%;
+    }
+    .b9.show {
+        height: 36%;
+        top:29%;
+        left: 31%;
+    }
+    .b10.show {
+        height: 18%;
+        top:46%;
+        left: 20%;
+    }
+    .b11.show {
+        height: 18%;
+        top:41%;
+        left: 80%;
+    }
+    .b12.show {
+        height: 13%;
+        top:49%;
+        left: 73.5%;
+    }
+    .b13.show {
+        height: 18%;
+        top:48%;
+        left: 64%;
+    }
+    .b14.show {
+        height: 27%;
+        top:44%;
+        left: 50%;
+    }
+    .b15.show {
+        height: 13%;
+        top:59%;
+        left: 42%;
+    }
+    .sector_info_1{
+        color: #23B5AD;
+        font-family: 'Raleway Thin', sans-serif;
+        font-weight: 200;
+        font-size: 14pt;
+        margin: 2% 20% 0 45%;
+    }
+    .sector_info_2{
+        color: #23B5AD;
+        font-family: 'Raleway Semibold', sans-serif;
+        font-weight: 600;
+        font-size: 20pt;
+        margin: 2% 15% 0 50%;
+    }
+    .sector_info_3{
+        color: #FFFFFF;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        font-size: 12pt;
+        width : 25%;
+        margin-top: 2%;
+        margin-left: 65%;
+    }
+    #sector_name{
+        color: #92FCFF;
+        text-align: left;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 20pt;
+        position: relative;
+        float : left;
+        width : 100%;
+        min-height: 75px;
+    }
+
+    .sector_name_div {
+        margin : 2% 5% 0 65%;
+    }
+
+    #sector_img {
+        position : absolute;
+        margin-left : -5%;
+    }
+
+    .sector_number{
+        color: #92FCFF;
+        text-align: left;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 26pt;
+    }
+    .sector_number_subtitle{
+        color: #69E2D9;
+        text-align: left;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 100;
+        font-size: 15pt;
+    }
+
+</style>
+<div class="container_town">
+    <div class="town">
+        <img class="town-img" src="img/plateau.svg" />
+        <img id="b1" class="building b1" src="img/quartier/bat/bat1/off.png"/>
+        <img id="b2" class="building b2" src="img/quartier/bat/bat2/off.png"/>
+        <img id="b3" class="building b3" src="img/quartier/bat/bat3/off.png"/>
+        <img id="b4" class="building b4" src="img/quartier/bat/bat4/off.png"/>
+        <img id="b5" class="building b5" src="img/quartier/bat/bat5/off.png"/>
+        <img id="b6" class="building b6" src="img/quartier/bat/bat6/off.png"/>
+        <img id="b7" class="building b7" src="img/quartier/bat/bat7/off.png"/>
+        <img id="b8" class="building b8" src="img/quartier/bat/bat8/off.png"/>
+        <img id="b9" class="building b9" src="img/quartier/bat/bat9/off.png"/>
+        <img id="b10" class="building b10" src="img/quartier/bat/bat10/off.png"/>
+        <img id="b11" class="building b11" src="img/quartier/bat/bat11/off.png"/>
+        <img id="b12" class="building b12" src="img/quartier/bat/bat12/off.png"/>
+        <img id="b13" class="building b13" src="img/quartier/bat/bat13/off.png"/>
+        <img id="b14" class="building b14" src="img/quartier/bat/bat14/off.png"/>
+        <img id="b15" class="building b15" src="img/quartier/bat/bat15/off.png"/>
+    </div>
+</div>
+<div class="sector_info">
+    <p class="sector_info_1">Vous l’aurez compris, ce sont les grandes entreprises qui représentent une part très majoritaire de l’emploi numérique à Nantes.</p>
+    <p class="sector_info_2">Découvrez les secteurs les plus porteurs d’emplois en 2015 parmi ces 612 entreprises à travers notre Quartier numérique nantais.</p>
+    <div class="sector_name_div">
+        <img id="sector_img" src="img/light.png" width="60" height="60"/>
+        <span id="sector_name">Survolez les immeubles du quartier numérique pour plus d'infos !</span>
+    </div>
+    <div class="sector_name_div">
+        <span class="sector_number" id="sector_companies">0</span>
+        <p class="sector_number_subtitle">entreprises</p>
+        <span class="sector_number" id="sector_jobs">0</span>
+        <p class="sector_number_subtitle">emplois</p>
+    </div>
+    <p class="sector_info_3">Donc, les secteurs d’avenir du numérique à Nantes en 2015 sont le conseil en système et logiciels informatiques, la programmation informatique, et l’édition de logiciels d’applicatifs (soit les programmes directement utilisés par l’utilisateur pour réaliser une tâche).</p>
+    <p class="source">Sources : Acoss 2016 et INSEE Sirene 2016</p>
+    <div class="social-media">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="SpokaLab" data-hashtags="Hyblab"></a>
+        <div class="fb-share-button" data-href="http://bit.ly/2kYNp2S" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A63342%2FHyblabDDJ2017%2Fauran%2Fpublic%2Findex.html%3F_ijt%3D6p03dv4a4rev7ssu3nn169u84v%23section3&amp;src=sdkpreparse">Partager</a></div>
+        <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://bit.ly/2kYNp2S"></div>
+    </div>
+</div>

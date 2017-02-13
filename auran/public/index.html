@@ -1,40 +1,159 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2017</h1>
-    </header>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>L'économie numérique à Nantes</title>
+    <meta name="author" content="Team Spöka" />
+    <meta name="description" content="Quelle dynamique de l'économie numérique" />
+    <meta name="keywords"  content="economie, numerique, dynamique, Nantes, métropole" />
+    <meta name="Resource-type" content="Document" />
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/examples.css" />
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+    <!--[if IE]>
+    <script type="text/javascript">
+        var console = { log: function() {} };
+    </script>
+    <![endif]-->
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2017</p>
-    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'fr'}</script>
+
+    <script type="text/javascript" src="./js/scrolloverflow.js"></script>
+
+    <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="./js/examples.js"></script>
+    <script type="text/javascript" src="./js/animation.js"></script>
+    <script type="text/javascript" src="./js/numeric_sector.js"></script>
+
+    <script>
+        $(function(){
+
+            $(".page1").load("page1.html");
+            $(".page2").load("page2.html");
+            $(".page3").load("page3.html");
+            $("#thankyou").load("bandeau.html");
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                afterLoad: function(anchorLink, index){
+                    if(index==1){
+                        fillInformationsOnSector();
+                    }
+                    if(index==6){
+                        animateBuildings();
+                    }
+                    else if(index==7){
+                        animateComponents();
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    !function(d,s,id){
+        var js,
+            fjs=d.getElementsByTagName(s)[0],
+            p=/^http:/.test(d.location)?'http':'https';
+
+        if(!d.getElementById(id)){
+            js=d.createElement(s);
+            js.id=id;
+            js.src=p+'://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js,fjs);
+        }
+    }(document, 'script', 'twitter-wjs');
+    </script>
+
+<div id="fullpage">
+    <div class="section" id="section0">
+        <img src="./img/titrefinalhyblab.svg" alt=""/>
+        <div class="arrow bounce" onclick="location.href='http://hyblab.sauray.com/auran/#section1';" ></div>
     </div>
-  </body>
+    <div class="section" id="section1">
+        <h3>L'économie numérique à Nantes, c'est quoi ?</h3>
+        <!--<div class="section-content" id="def">
+            <div class="data1"><p id="data1"></p></div>
+            <div class="data2"><p id="data2"></p></div>
+            <div class="data3"><p id="data3"></p></div>
+            <div class="data4"><p id="data4"></p></div>
+            <div class="data5" id="data5">
+                <p id="sector_count"></p>
+                <ul id="sectors_ul">
+                </ul>
+            </div>
+
+            <p class="source">Sources : AURAN, Nantes Tech</p>
+
+        </div>
+        -->
+        <img src="./img/picto.png" id="picto" height="80%">
+    </div>
+    <div class="section" id="section2">
+        <h3>Qui fait réellement vivre l'économie numérique à Nantes ?</h3>
+
+        <div class="section-content">
+            <p class="before">A Nantes, quand on parle du secteur numérique, on a plutôt tendance à penser aux entreprises individuelles et aux startups. Si ces dernières sont fortes en communication et représentent une part plus importante du nombre d’entreprises, ce sont pourtant les entreprises avec salariés qui pèsent le plus en termes d’emplois.</p>
+            <p class="legende">Une entreprise individuelle, c’est une startup créée par un entrepreneur indépendant, qui n’a donc pas de salariés et qui propose une prestation de conseils et de services.</p>
+            <p class="after">En quantité d’entreprises, les entreprises individuelles représentent plus de deux tiers (67,14%) des entreprises du numérique à Nantes Métropole.</p>
+
+            <p class="legende">Une entreprise individuelle, c’est une startup créée par un entrepreneur indépendant, qui n’a donc pas de salariés et qui propose une prestation de conseils et de services.</p>
+            <p class="after">Si elles sont plus nombreuses, les entreprises individuelles pèsent faiblement dans l’emploi numérique. Elles représentent 5,7% de l’emploi du secteur numérique à NM en 2015.
+                Pour comparaison, elles représentent 10,7% de l’emploi de l’économie locale dans son ensemble à Nantes.
+
+                C’est une tendance propre à l’économie nantaise. A l’échelle nationale, les entreprises individuelles constituent 14,1% des emplois du secteur numérique, contre 15,5% des emplois de l’économie globale. Le rapport est donc beaucoup moins marqué qu’à Nantes.</p>
+            <p class="source">Sources : Acoss 2016 et INSEE Sirene 2016</p>
+        </div>
+
+        <div class="social-media">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="SpokaLab" data-hashtags="Hyblab"></a>
+            <div class="fb-share-button" data-href="http://bit.ly/2jK2Yqj" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhttp://bit.ly/2kYNp2S&amp;src=sdkpreparse">Partager</a></div>
+            <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://bit.ly/2jK2Yqj"></div>
+        </div>
+    </div>
+
+    <div class="section" id="section-dataviz1">
+        <video class="video-graphique" muted data-autoplay>
+            <source src="data/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="section" id="section-dataviz2">
+        <video class="video-graphique" muted data-autoplay>
+            <source src="data/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+   <div class="section" id="section6">
+       <div class="page1"></div>
+
+    </div>
+    <div class="section" id="section7">
+        <div class="page2"></div>
+  </div>
+    <div class="section" id="section8">
+        <div class="page3"></div>
+    </div>
+<div class="section" id="section9"> 
+        
+       <div id="thankyou">
+        </div>
+    </div>
+  </div>
+
+</body>
 </html>

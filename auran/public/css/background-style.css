@@ -1,0 +1,84 @@
+/* just a sample css rule to show that everything works */
+footer p
+{
+  font-size: small;
+  text-align: center;
+}
+
+header{
+  text-align: center;
+}
+
+header img{
+  max-width: 100%;
+	height: auto;
+}
+
+/* Style for our header texts
+        * --------------------------------------- */
+h1{
+    font-size: 5em;
+    /*font-family: 'Raleway', sans-serif;*/
+     font-family: arial,helvetica;   
+    color: #fff;
+    margin:0;
+    padding:0;
+}
+.intro p{
+    color: #fff;
+}
+
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+    text-align:center;
+}
+
+
+
+/* Defining each section background and styles
+* --------------------------------------- */
+#section0{
+    background: -webkit-gradient(linear, top left, bottom left, from(#140F21), to(#140F21));
+    background: -webkit-linear-gradient(#140F21, #140F21);
+    background: linear-gradient(#140F21,#140F21);
+}
+
+#section1{
+    background: -webkit-gradient(linear, top left, bottom left, from(#140F21), to(#140F21));
+    background: -webkit-linear-gradient(#140F21, #140F21);
+    background: linear-gradient(#140F21,#140F21);
+}
+
+#section2 {
+    background: -webkit-gradient(linear, top left, bottom left, from(#140F21), to(#140F21));
+    background: -webkit-linear-gradient(#140F21, #140F21);
+    background: linear-gradient(#140F21, #140F21);
+}
+
+#section6, #section7, section8, section9 {
+    background: -webkit-gradient(linear, top left, bottom left, from(#140F21), to(#140F21));
+    background: -webkit-linear-gradient(#140F21, #140F21);
+    background: linear-gradient(#140F21, #140F21);
+}
+
+/*Adding background for the slides
+* --------------------------------------- */
+#slide1{
+    background: -webkit-gradient(linear, top left, bottom left, from(#7baabe), to(#969ac6));
+    background: -webkit-linear-gradient(#7BAABE, #969AC6);
+    background: linear-gradient(#7BAABE,#969AC6);
+}
+#slide2{
+    background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
+    background: -webkit-linear-gradient(#92a1ca, #76c2bd);
+    background: linear-gradient(#92a1ca,#76c2bd);
+}
+
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+    color: #fff;
+}
