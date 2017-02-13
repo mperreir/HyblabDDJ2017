@@ -8,11 +8,7 @@ fetch('data/dummy.json')
     // this promise will be fulfilled when the json fill will be
     .then(function (response){
         // if we could load the resource, parse it
-        if( response.ok )
-            return response.json();
-        else // if not, send some error message as JSON data
-            return {data: "JSON file not found"};
-
+        section1
     })
     // in case of invalid JSON (parse error) send some error message as JSON data
     .catch( function (error){
