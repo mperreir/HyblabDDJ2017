@@ -1,40 +1,85 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-		<!-- Basic viewport setting for mobile friendly page -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-		<!-- Those polyfills are required so that old browsers support fetch mecanism -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
-		<!-- Simple sample script that loads data from a dummy json file -->
-		<script src="js/example.js" defer></script>
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-			<img src="img/logo_hyblab.png" alt="logo hyblab"/>
-      <h1>Hyblab Datajournalism 2017</h1>
-    </header>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>L'économie numérique à Nantes</title>
+    <meta name="author" content="Team Spöka" />
+    <meta name="description" content="Quelle dynamique de l'économie numérique" />
+    <meta name="keywords"  content="economie, numerique, dynamique, Nantes, métropole" />
+    <meta name="Resource-type" content="Document" />
 
-    <!-- Le contenu du site -->
-    <p>Replace this content by your web app !</p>
 
-		<p>Here is some data from a json file : <span id="data"></span><p>
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/examples.css" />
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2017</p>
-    </footer>
+    <!--[if IE]>
+    <script type="text/javascript">
+        var console = { log: function() {} };
+    </script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="./js/scrolloverflow.js"></script>
+
+    <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="./js/examples.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage();
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="fullpage">
+    <div class="section " id="section0">
+        <h1>L'économie numérique</h1>
     </div>
-  </body>
+    <div class="section" id="section1">
+        <h3>Mais qu'est-ce que l'économie numérique ?</h3>
+        <div class="section-content">
+
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <h3>Les entreprises qui se créent</h3>
+
+        <div class="section-content">
+            <p>En 2015, dans la métropole nantaise, dans le secteur numérique, sur 1863 entreprises : </p>
+            <ul>
+                <li>1251 entreprises individuelles</li>
+                <li>612 entreprises comptant des salariés</li>
+            </ul>
+            <p>Autrement dit, en quantité d’entreprises, les entreprises individuelles représentent environ <strong>67,14%</strong> des entreprises du numérique à Nantes Métropole.<br/></p>
+            <p>En revanche, les entreprises individuelles contribuent faiblement à la création d’emplois : elles représentent <strong>0,2%</strong> des emplois dans le numérique à NM en 2015.
+               Types d’entreprises individuelles : startup vouée à grandir ou à mourir, entrepreneur indépendant en prestation de conseil et services qui n'a pas vocation à sortir de ce schéma, auto-entrepreneurs contraints de créer leur société pour proposer leurs services sur une plateforme...
+            </p>
+            <p>A Nantes, quand on parle du secteur numérique, on a plutôt tendance à parler des entreprises individuelles, des startups qui appartiennent à la catégorie des PME et des associations (Atlantic 2.0 par exemple). Pourtant, les grandes entreprises (ESN) occupent une place plus importante dans le secteur numérique en métropole nantaise. On fait beaucoup moins de communication autour de ces grandes entreprises lors des forums ou des salons organisés à Nantes sur le secteur numérique (Web2day).
+            </p>
+        </div>
+
+        <div class="section-dataviz">
+
+        </div>
+
+    </div>
+    <div class="section" id="section3">
+        <h3>Les entreprises qui emploient</h3>
+        <div class="section-content">
+            <p>Les grosses entreprises sont celles qui pèsent le plus dans l'économie numérique, puisqu'elles créent plus d'emplois. Les secteurs privilégiés par les entreprises qui emploient le plus sont :</p>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <h3>L'écosystème numérique et ses interactions</h3>
+        <p></p>
+    </div>
+</div>
+
+
+</body>
 </html>
