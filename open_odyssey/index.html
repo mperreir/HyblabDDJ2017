@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Environnements Solidaires</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="public/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/main.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="public/js/jquery.fullPage.min.js"></script>
+    <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/"; ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script>
+
+    <script src="public/js/main.js" defer></script>
+    <script src="public/js/animation.js" defer></script>
+
+    <script src="public/js/donut.js" defer></script>
+    <script src= "public/js/radial.js" defer></script>
+    <script src= "public/js/chart.js" defer></script>
+    
+  </head>
+
+  <body>
+
+    <section id="fullpage">
+      <article class="section" id="slide1">
+              <h1 class="text">Ces encombrants qui nous rapprochent</h1>
+              <h2 class="text">Zoom sur Environnements Solidaires : <br>une inspiration venue d’un quartier prioritaire de l’agglomération nantaise.</h2>
+              <div id="div_apparition_fleche"><img src="public/img/Flèche-Bas.svg" id="fleche" alt="Une flèche en SVG" class="animated bounce infinite"/></div>
+      </article>
+
+      <article class="section" id="slide2">
+        <video id="video" data-autoplay>
+            <source src="public/data/Hyblab_Intro_Final_6Mo.mp4" type="video/mp4">
+        </video>
+      </article>
+     
+      <article class="section" id="slide3">
+        <img id="ville1_slide3" alt="ville-flat-design-1" src="public/img/Ville1.png">
+        <div id="text_slide3_disp">
+          <div id="text_slide3_app">
+            <p ><span class="text_important text_big">Bellevue</span> est un quartier à cheval sur <span class="text_important">nantes</span></br>
+            et <span class="text_important">Saint-Herblain</span> qui compte <span class="text_important text_big">19 400</span> habitants.
+            </p>
+            <p>
+              C'EST UN QUARTIER PRIORITAIRE DE LA POLITIQUE DE LA VILLE</br>
+              AVEC <u>UNE FORTE ACTIVITÉ ASSOCIATIVE.</u>
+            </p>
+          </div>
+          <div id="revenu_median"></div>
+        </div>
+          <img id="ville2_slide3" alt="ville-flat-design-2" src="public/img/Ville2.png">
+          <div id="donut"></div>
+      </article>
+
+      <article class="section" id="slide4">
+        <h1> </h1>
+        <p>Encombrants Solidaires</br>
+        (devenu <strong>Environnements Solidaires</strong> en 2013)</br> 
+        est porté par l’association Ocean et six bailleurs sociaux depuis 2012.</br>
+        </p>
+        <hr width="50%"" color="white">
+        <p>
+          Elle propose des solutions d’emploi de proximité pour des habitants en difficulté</br>
+          dans le quartier de bellevue autour d’actions liées à la gestion des encombrants.</br>
+          Une initiative écologique et solidaire pour que ces objets vivent une seconde vie</br>
+          en profitant à d’autres personnes qui sont dans le besoin.</br>
+        </p>
+      </article>
+
+      <article class="section" id="slide5">
+        <div id="partie_gauche">
+          <div id="titre_gauche"><h1>Une association qui prend</br> de l'ampleur...</h1></div>
+          <div id="bloc_texte"><span class="text_important text_huge" id="b1">200</span>
+          <p id="b2">Tonnes <span class="text_important">de déchets</span></br> <span class="text_important">récoltés depuis</span> 2013</p></div>
+
+          <div id="image_gauche">
+            <div id="micro-onde"><img src="public/img/objet1.svg" alt="un micro-onde" id="img_micro" ></div>
+            <div id="lave"><img src="public/img/objet2.svg" alt="un lave linge" id="img_lave_linge" ></div>
+            <div id="commode"><img src="public/img/objet3.svg" alt="une commode" id="img_commode" ></div>
+            <div id="grille_pain"><img src="public/img/objet4.svg" alt="un grille pain" id="img_grille_pain" ></div>
+          </div>
+          <div id="ligne"><img src="public/img/ligne.svg" alt="une ligne" id="img_ligne" ></div>
+          <div id="texte_gauche">
+            <p id="tonnes">= 1 tonne</p>
+            <div id="bloc4">
+              <span id="text1">1 grille pain: 2 kg</span><span id="text2">1 lave linge: 80 kg</span>
+              <span id="text3">1 commode: 50 kg</span><span id="text4">1 micro-onde: 10 kg</span>
+            </div>
+          </div>
+        </div>
+          
+        </div>
+        <div id="partie_droite">
+          <div id="b_gauche">
+            <div id="titre_droite"><span class="text_important text_huge" id="num6">6</span>
+            <p id=bloc3>bailleurs</br>en<span class="text_important"> 2017</span></p></div>
+            <div id="nom_bailleur">
+              <div id="habitat1"><p>Nantes Métropole Habitats</p></div>
+              <div id="habitat2"><p>LNH</p></div>
+              <div id="habitat3"><p>Habitat 44</p></div>
+              <div id="habitat4"><p>Harmonie Habitat</p></div>
+              <div id="habitat5"><p>SAMO</p></div>
+              <div id="habitat6"><p>Atlantique Habitation</p></div>
+            </div>
+          </div>
+          <div id="traits">
+              <div id="div_ligne1"><hr width="100%" color="white" id="ligne1"></div>
+              <div id="div_ligne2"><hr width="100%" color="white" id="ligne2"></div>
+              <div id="div_ligne3"><hr width="100%" color="white" id="ligne3"></div>
+              <div id="div_ligne4"><hr width="100%" color="white" id="ligne4"></div>
+              <div id="div_ligne5"><hr width="100%" color="white" id="ligne5"></div>
+              <div id="div_ligne6"><hr width="100%" color="white" id="ligne6"></div>
+
+          </div>
+          <div id="image_bailleur">
+            <div id="bloc_bas"><img src="public/img/bloc1.svg" alt="un bloc" id="img_bloc1" ></div>
+            <div id="bloc_vert"><img src="public/img/bloc2.svg" alt="un bloc" id="img_bloc2" ></div>
+            <div id="bloc_bleu4"><img src="public/img/bloc3.svg" alt="un bloc" id="img_bloc3" ></div> 
+            <div id="bloc_bleu3"><img src="public/img/bloc4.svg" alt="un bloc" id="img_bloc4" ></div>
+            <div id="bloc_bleu2"><img src="public/img/bloc5.svg" alt="un bloc" id="img_bloc5" ></div>
+            <div id="bloc_bleu1"><img src="public/img/bloc6.svg" alt="un bloc" id="img_bloc6" ></div>
+            <div id="bloc_rouge"><img src="public/img/bloc7.svg" alt="un bloc" id="img_bloc7" ></div>
+            <div id="bloc_toit"><img src="public/img/bloc8.svg" alt="un bloc" id="img_bloc8" ></div>
+
+          </div>
+          <div id="dates">
+              <div id="date2016"><img src="public/img/date3.svg" alt="la date 2016" id="img_2016" ></div>
+              <div id="date2015"><img src="public/img/date2.svg" alt="la date 2015" id="img_2015" ></div>
+              <div id="date2012"><img src="public/img/date1.svg" alt="la date 2012" id="img_2012" ></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="section" id="slide6">
+        <div id ="t22"><h1 id = "t2"> Portée par <span class="text_important text_big">8</span> opérateurs,<br/>
+        au service du <span class="text_important text_big"> bien etre </span> des habitants de bellevue,</h1></div>
+        <div id ="op11"><img src="public/img/8operateurs.svg" alt = "un bloc" id ="op1"/></div>
+        <div id = "op22"> <img src="public/img/PosteDeTravail_modif.png" alt = "un bloc" id ="op2"/></div>
+        <div id ="t33"><h1 id = "t3"> L'association a aussi pour objectif d'aider les habitants du quartier à s'insérer dans la vie professionnelle.</h1></div>
+        <div id = "t44"><h3 id = "t4"> Les opérateurs sont embauchés à temps plein, pendant 9 à 12 mois, via des emplois financés<br/> par des aides de l'Etat: contrats jeunes, contrats d'avenir et <span class ="text_important"> CUI-CAR. <br/> Contrat Unique d'Insertion - Contrat d'Accompagnement par l'Emploi.</span><br/><br/>
+
+        Sur cette période, Chaque opérateur est également accompagné pour trouver une formation adaptée à son profil</h3></div>
+        <img src="public/img/Imede.png" alt = "un bloc" id ="op3"/>
+        <h9 id = "t5"><span class="text_important">Imède</span><br/>23 ans <br/>Opérateur de l'association depuis juin 2016</h9>
+        <img src="public/img/BlocBlanc.svg" alt = "un bloc" id ="op4"/>
+        <h3 id ="t6"> <span class="bleuciel"> "L'association m'a permis de découvrir le monde du travail. J'ai même pu reprendre<br/> m'a formation de géomètre-topographe. C'est une vrai chance. Tous mes amis m'envient!"</span></h3>
+      </article>
+
+      <article class="section" id="slide7">
+        <h1 id="titre_s7"><span class="text_bleu" id="titre1_s7">ENCOMBRANTS SOLIDAIRES devient... </span><br/><span id="titre2_s7">  ENVIRONNEMENTS SOLIDAIRES</span></h1>
+          <img src="public/img/Nadia.png" alt="un portrait" id="img_nadia" >
+          <div id="texte_s7">
+            <p id="text_slide7">« Nous nous sommes aperçus que notre travail dépassait </br></br>
+            le cadre de la récolte d’encombrants. En améliorant le cadre<br/></br>
+            de vie nous participons aussi à la vie sociale du quartier. »</p>
+            <p class="text_important" id="text_presNadia">▬ Nadia, 46 ans, encadrante technique depuis 2013.</p></li>
+          </div>
+      </article>
+
+
+      <article class="section" id="slide8">
+        <h1 id="titre_s8">Le<span class="text_bleu"> lien social</span> devient central dans<br/> les objectifs d'Environnements Solidaires</h1>
+        <div id="text_slide8">
+          <p class="text_important">Des personnes isolées<br/>et démunies</p>
+          <hr width="100%" color=#18857f>
+          <p id="source_s8">Sources: Insee - DGI</p>
+          </div>
+        <div id="myChart2"></div>
+        <div id="legende_data_slide8"><p>Part des ménages composés de personnes seules à bas revenu</p></div>
+      </article>
+
+      <article class="section" id="slide9">
+        <div id ="t777">
+          <div id="t77">
+            <h1 id ="t7">
+              <span class ="text_bleu">Le </span> porte-à-porte
+              <span class ="text_bleu">: un premier contact pour <b><u> lutter contre l'isolement.</u></b></span>
+            </h1>
+          </div>
+        </div>
+        <div id="t99">
+        <h3 id ="t9">
+          <b> Les opérateurs sont en charge de faire connaître l'association</b> lors de porte-à-porte dans tous les logements des bailleurs partenaires.<br/><br/>
+          C'est aussi <b> une occasion de rendre visite aux personne isolées </b> et de faire le lien entre les bailleurs et les habitants.<br/>
+          <span class="text_bleu"> Par exemple, pour faire passer des messages sur des problèmes ou des travaux...</span>
+          </h3>
+        </div>
+        <div id = "jef">
+          <img src="public/img/Jeffry.png" alt="un portrait" id="jeff" >
+        </div>
+        <div id= u11>
+          <h2 id = "u1">
+           "Il y a des personnes qui ne voient que nous pendant la semaine.<br/> Nous faisons partie de la vie du quartier et nous ne venons pas seulement pour<br/> récupérer un meuble. <b>Nous venons surtout pour partager un moment."</b><br/>
+          </h2>
+        </div>
+        <div id ="u22">
+          <h2 id ="u2">
+            <span class="text_important"> - Jeffry, 22 ans, opérateur de l'association depuis septembre 2016.</span>
+          </h2>
+        </div>
+        <div id = "s11">
+          <img src="public/img/Scenette1.png" alt="un portrait" id="s1" >
+        </div>
+        <div id = "s22">
+          <img src="public/img/Scenette2.png" alt="un portrait" id="s2" >
+        </div>
+        <h2 id = "u3">
+          <span class="text_bleu"> Les opérateurs passent en moyenne <span class = "text_important text_big2"> 6 minutes </span> par porte-à-porte. <br/></span>
+          <br/> Par exemple, pour les bailleurs SAMO, <span class ="text_important text_big2"> 283 personnes </span> en 2016 ont été<br/> sensibilisées aux actions de Environnement Solidaire lors du porte-à-porte.
+          </h2>
+      </article>
+
+      <article class="section" id="slide10">
+        <div id="paragraphe10">
+          <p id="text1_slide10">"Le changement de nom vient aussi des évènements que nous organisons<br/>régulièrement afin de sensibilier les habitants. Dans ces ateliers, nous<br/> parlons de <span class="text_bleu"><span class="text_big">l'importance des écogestes dans leur vie quotidienne</span></span></p>
+          <p id="text2_slide10">Nous invitons beaucoup de familles, nous les mettons en contact.<br/>
+          Le but est qu'ils se connaissent et <span class="text_bleu"><span class="text_big">s'intégrent plus facilement dans leur quartier"</span></span></p>
+          <hr width="5%" class="important">
+          <p id="presNadia"><span class="text_important"><span class="text_big">Nadia,</span> 46 ans, encadrante technique depuis 2013.</span></p>
+        </div>
+        <div id="nadia2"><img src="public/img/Nadia.png" alt="un portrait" id="img_nadia2"></div>
+      </article>
+
+      <article class="section" id="slide11">
+        <div><p id="text1_slide11"><span class="text_big">Des animations</span> <span class="text_big2"><span class="text_bleu"> 1 fois par mois</span></span></p></div>
+        <div><img src="public/img/activitéEnfant.png" alt="une animation" id="img_animation"></div>
+        <div><p id="text2_slide11"><span class="text_bleu"><span class="text_big2">11 évènements </span></span><span class="text_big">depuis fin 2015. </span><span class="text_bleu"><span class="text_big2">252 habitants </span></span> <span class="text_big">y ont participé.</span></p></div>
+      </article>
+
+<article class="section" id="slide12">
+        <div id="paragraphe">
+        <p id=p1>L’association <span class="text_majuscule">Environnements Solidaires</span> intervient dans le quartier<br/> Bellevue - Saint-Herblain depuis 2012. La collecte des encombrants a permis de créer<br/> du <span class="text_important">lien social</span> entre individus et générations, <span class="text_important">d’améliorer le vivre ensemble<br/></span> dans un quartier avec beaucoup de logements sociaux.<br/><br/>
+          
+        Cette initiative a été saluée par François Hollande qui lui a  décerné <span class="text_important">le prix<br/>  « La France s’engage »</span> en avril 2015. Suite à cela, Environnements Solidaires<br/> a gagné en visibilité, a été accompagnée dans son développement<br/> et a aussi bénéficié d’une aide financière.</p>
+
+        <p id=p2>Enfin, en quatre ans, <span class="text_important"><span class="text_big">2 000 logements</span> ont rejoint le dispositif.</span></p> 
+
+        <span class="text_bleu"><p id=p3>Pour Didier Gendron, président de l’association, l’objectif est désormais<br/> « d’étendre Environnements Solidaires à tous les bailleurs<br/> de Nantes Métropole et in fine, de France… »<br/><br/>
+
+        Affaire à suivre !</p></span>
+
+        <ul id="social_network">
+              <li><a href=""><img src="public/img/google-plus.svg" alt="google-plus" class="animated bounce infinite"></a></li>
+              <li><a href=""><img src="public/img/facebook-with-circle.svg" alt="facebook" class="animated bounce infinite"></a></li>
+              <li><a href=""><img src="public/img/twitter-with-circle.svg" alt="twitter" class="animated bounce infinite"></a></li>
+        </ul>
+
+        </div>
+
+        </article>
+
+        <article class="section" id="slide13">
+
+        <div id="partie1_slide13">
+          <h1>Au coeur de ce projet</h1>
+          <hr width="15%" color="white">
+        </div>
+
+        <div id="partie2_slide13">
+          <ul id="liste_noms">
+            <li>Julien Beccu
+              <ul id="poste">
+                <li><span class="text_bleu">SciencesCom<br />Rédaction</span></li>
+              </ul>
+            </li>
+            <li>Lou Dubar
+              <ul id="poste">
+                <li><span class="text_bleu">SciencesCom<br />Rédaction</span></li>
+              </ul>
+            </li>
+            <li>Pierre Forget
+              <ul id="poste">
+                <li><span class="text_bleu">SciencesCom<br />Rédaction</span></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul id="liste_noms">
+            <li>Benjamin Landry
+              <ul id="poste">
+                <li><span class="text_bleu">Polytech<br/>Développeur Web</span></li>
+              </ul>
+            </li>
+            <li>Jean Portalis
+              <ul id="poste">
+                <li><span class="text_bleu">Polytech<br/>Développeur Web</span></li>
+              </ul>
+            </li>
+            <li>Omar Diouf
+              <ul id="poste">
+                <li><span class="text_bleu">Polytech<br/>Développeur Web</span></li>
+              </ul>
+            </li>
+            <li>Quentin Maisonneuve
+              <ul id="poste">
+                <li><span class="text_bleu">Polytech<br/>Développeur Web</span></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul id="liste_noms">
+            <li>Romain Celton
+              <ul id="poste">
+                <li><span class="text_bleu">AGR<br/>Design</span></li>
+              </ul>
+            </li>
+            <li>Sara Thion
+              <ul id="poste">
+                <li><span class="text_bleu">AGR<br/>Design</span></li>
+              </ul>
+            </li>
+            <li>Timothée Raliravaka
+              <ul id="poste">
+                <li><span class="text_bleu">AGR<br/>Design</span></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+        <div id="bandeau">
+          
+            <!-- Les organisateurs -->
+            <ul>
+              <!-- Logo Hyblab -->
+              <li><a href="http://www.hyblab.fr/"><img id="hyblab" src="public/img/logo_hyblab.png" alt="Hyblab DataSport"></a></li>
+              <li><a href="http://www.ouestmedialab.fr/"><img src="public/img/logo_oml.png" alt="Ouest Médialab"></a></li>
+              <li><a href="http://www.agrnantes.fr"><img src="public/img/ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
+              <li><a href="http://www.univ-nantes.fr/"><img src="public/img/ecoles/logo_universitenantes.jpg" alt="Université de Nantes"></a></li>
+              <li><a href="http://www.polytech.univ-nantes.fr/"><img src="public/img/ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
+              <li><a href="http://sciencescom.audencia.com/"><img src="public/img/ecoles/logo_sciencescom.jpg" alt="SciencesCom"></a></li>
+            </ul>
+            <!-- Les autres logos -->
+            <ul>
+              <!-- Logos CC et opensource -->
+              <li><img id="cc" src="public/img/logo_cc.png" alt="Creative commons"></li>
+              <li><img id="opensource" src="public/img/logo_opensource.png" alt="Open source"></li>
+              <!-- Logo de votre partenaire -->
+              <li><a href="http://www.open-odyssey.org/"><img src="public/img/partenaires/logo_openodyssey.png" alt="Open Odyssey"></a></li>
+              <li><a href="http://www.presseocean.fr//"><img src="public/img/partenaires/LOGO_PRESSEOCEAN.png" alt="Presse Océan"></a></li>
+              <li><a href="http://www.terristoires.info/"><img id="img_terristoires" src="public/img/partenaires/banniere_terristoires.jpg" alt="Terristoires"></a></li>
+              <!-- Partenaires institutionnels -->
+              <li><a href="http://www.paysdelaloire.fr/"><img class="institutionnel" src="public/img/institutionnels/logo_pdl.png" alt="Pays de La Loire"></a></li>
+              <li><a href="http://www.stereolux.fr"><img class="institutionnel" src="public/img/institutionnels/logo_stereolux.png" alt="Stereolux"></a></li>
+              <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="public/img/institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
+            </ul>
+          </div>
+      </article>
+
+      </section >
+
+  </body>
+
+</html>
