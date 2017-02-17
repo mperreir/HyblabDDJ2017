@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+<head>
+	<!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+	<meta charset="utf-8">
+	<title>St Nazaire - Où vont vos impôts ?</title>
+	<!-- Basic viewport setting for mobile friendly page -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo_sn.ico" media="screen" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+
+
+	<!-- Déclaration de la feuille de style du document-->
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/impots.css">
+
+</head>
+
+
+<body>
+	<div class="sections">
+
+		<!-- SECTION 1 : Intro, gender, age and residence area -->
+		<section id="section1_gender" >
+			<div class="row">
+				<div class="column small-12">
+
+					<div class="row title">
+						<div class="column small-12 text-center">
+							<h3>Sélectionnez votre avatar</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-4"><p></p></div>
+						<div class="column small-2 text-center" id="select_female"><img class="character" id="female" src="svg/shadow_female.svg"/></div>
+						<div class="column small-2 text-center" id="select_male"><img class="character" id="male" src="svg/shadow_male.svg"/></div>
+						<div class="column small-4"><p></p></div>
+					</div>
+
+
+					<div class="row nextButton">
+						<div class="column small-2 small-offset-5">
+							<a id="toSection1_intro" class="button hollow secondary large expanded">Suivant</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<section id="section1_intro">
+			<div class="row">
+				<div class="column small-12">
+
+					<div class="row title">
+						<div class="column small-12 text-center">
+							<h3>Voyons quelle part de vos impôts</h3>
+							<h3>va aux projets de la ville !</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-5"><p></p></div>
+						<div class="column small-2 text-center"><img class="section1_gender_img character"/></div>
+						<div class="column small-5"><p></p></div>
+					</div>
+
+					<div class="row nextButton">
+						<div class="column small-2 small-offset-5">
+							<a id="toSection1_age" class="button hollow secondary large expanded">Suivant</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+
+		<section id="section1_age">
+			<div class="row">
+				<div class="column small-12">
+
+					<div class="row title">
+						<div class="column small-12 text-center">
+							<h3>Mais d'abord, quel âge avez-vous ?</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-2"><p></p></div>
+						<div class="column small-3 bubbleAge"><input type="number" id="age"></div>
+						<div class="column small-2 text-center"><img class="section1_gender_img character"/></div>
+						<div class="column small-5"><p></p></div>
+					</div>
+
+
+					<div class="row nextButton">
+						<div class="column small-2 small-offset-5">
+							<a id="toSection1_residence" class="button hollow secondary large expanded">Suivant</a>
+						</div>
+					</div>
+
+				</div>	
+			</div>
+		</section>
+
+
+		<section id="section1_residence" >
+			<div class="row">
+				<div class="column small-12">
+
+					<div class="row title">
+						<div class="column small-12 text-center">
+							<h3>Habitez-vous à Saint-nazaire ?</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-2"><p></p></div>
+						<div class="column small-3 bubbleResidence">
+							<p><span><input type="radio" name="residence" value="yes">  Oui</span></p>
+							<p><span><input type="radio" name="residence" value="no">  Non</span></p>
+						</div>
+						<div class="column small-2 text-center"><img class="section1_gender_img character"/></div>
+						<div class="column small-5"><p></p></div>
+					</div>
+
+					<div class="row nextButton">
+						<div class="column small-2 small-offset-5">
+							<a id="toSection2" class="button hollow secondary large expanded">Suivant</a>
+						</div>
+					</div>
+
+
+				</div>	
+			</div>
+		</section>
+
+
+
+
+		<!-- SECTION 2 : Talk with the mayor -->
+		<section id="section2_prechart">
+			<div class="row">
+				<div class="column small-12">
+
+					<div class="row title">
+						<div class="column small-12 text-center">
+							<h3>Redistribution des impôts</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-4">
+							<img id="bubble1" src="svg/bubble_1.svg"/>
+							<div id="bubble7" class="bubbleTaxesCost"><input type="number" id="taxesCost"></div>
+							<p></p>
+						</div>
+						<div class="column small-2 text-center"><img class="character section1_gender_img"/></div>
+						<div class="column small-2 text-center"><img class="character" src="svg/mayor.svg" /></div>
+						<div class="column small-4">
+							<img id="bubble2" src="svg/bubble_2.svg" />
+							<img id="bubble3" src="svg/bubble_3.svg" />
+							<img id="bubble5" src="svg/bubble_5.svg" />
+							<img id="bubble4" src="svg/bubble_4.svg" />
+							<img id="bubble6" src="svg/bubble_6.svg" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-12">
+							<input type="hidden" id="currentBubble" value="1">
+						</div>
+					</div>
+					
+					<div class="row nextButton">
+						<div class="column small-2 small-offset-4">
+							<a class="nextBubble button hollow secondary large expanded">Suivant</a>
+						</div>
+						<div class="column small-2">
+							<a href="quiz" class="button hollow secondary large expanded">Quiz</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="section2_chart">
+			<div class="row">
+				<div class="column small-12">
+
+					<div class="row title">
+						<div class="column small-12 text-center">
+							<h3>Redistribution des impôts</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-12">
+							<canvas id="myChart"></canvas>
+						</div>
+					</div>
+
+					<div class="row nextButton">
+						<div class="column small-2 small-offset-4">
+							<a class="nextBubble button hollow secondary large expanded">Suivant</a>
+						</div>
+						<div class="column small-2">
+							<a href="quiz" class="button hollow secondary large expanded">Quiz</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<section id="section2_postchart">
+			<div class="row">
+				<div class="column small-12">
+
+					<div class="row title">
+						<div class="column small-12 text-center">
+							<h3>Redistribution des impôts</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="column small-4">
+							<div id="bubble15" class="bubbleProjectsPart text-center">
+								<p>
+									<span><input type="radio" name="projectsPart" value="09">  09 %</span>
+									<span class="empty"></span>
+									<span><input type="radio" name="projectsPart" value="29">  29 %</span>
+								</p>
+								<p>
+									<span><input type="radio" name="projectsPart" value="49">  49 %</span>
+									<span class="empty"></span>
+									<span><input type="radio" name="projectsPart" value="69">  69 %</span>
+								</p>
+							</div>
+							<p></p>
+						</div>
+						<div class="column small-2 text-center"><img class="character section1_gender_img"/></div>
+						<div class="column small-2 text-center"><img class="character" src="svg/mayor.svg" /></div>
+						<div class="column small-4">
+							<img id="bubble9" src="svg/bubble_9.svg" />
+							<img id="bubble10" src="svg/bubble_10.svg" />
+							<img id="bubble11" src="svg/bubble_11.svg" />
+							<img id="bubble12" src="svg/bubble_12.svg" />
+							<img id="bubble13" src="svg/bubble_13.svg" />
+							<img id="bubble14" src="svg/bubble_14.svg" />
+							<img id="bubble16" src="svg/bubble_16.svg" />
+							<p></p>
+						</div>
+					</div>
+					
+					<div class="row nextButton">
+						<div class="column small-2 small-offset-4">
+							<a class="nextBubble button hollow secondary large expanded">Suivant</a>
+						</div>
+						<div class="column small-2">
+							<a href="quiz" class="button hollow secondary large expanded">Quiz</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+
+</body>
+</html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+<script src="js/impots.js"></script>
+
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>St Nazaire - Le projet de tout une vi[ll]e</title>
+	<title>Carte interactive</title>
 	<!-- Basic viewport setting for mobile friendly page -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Déclaration de la feuille de style du document-->
@@ -36,16 +36,10 @@ document.getElementById("pageAccueil").addEventListener("load", function() {
 	var svg = this.contentDocument;
 	var jouer = svg.getElementById("titre").childNodes[7];
 
-	var fb = svg.getElementById("footer-facebook");
-	var twitter = svg.getElementById("footer-twitter");
-	var google = svg.getElementById("footer-google");
+	console.log(jouer);
 
-	$(jouer).hover(focus($(jouer), '/saint_nazaire/impots.html'));
-	$(fb).hover(focus($(fb), 'https://www.facebook.com/saintnazaire.officiel'));
-	$(twitter).hover(focus($(twitter), 'https://twitter.com/VilleStNazaire'));
-	$(google).hover(focus($(google), "https://plus.google.com/100306863254035654993"));
-
-	function focus(elem, url){
+	$(jouer).hover(focus($(jouer)));
+	function focus(elem){
 		elem.mouseenter(function enter(){
 			this.style.opacity=0.5;
 			this.style.cursor = "pointer";
@@ -54,7 +48,7 @@ document.getElementById("pageAccueil").addEventListener("load", function() {
 			this.style.opacity = 1;
 		});
 		elem.click(function tester(){
-			window.location.href=url;
+			window.location.href='../impots.html';
 		});
 	};
 });

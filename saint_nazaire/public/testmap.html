@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Carte interactive</title>
+	<!-- Basic viewport setting for mobile friendly page -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Déclaration de la feuille de style du document-->
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/map.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/foundation-icons.css">
+
+</head>
+<body>
+	<div class="row expanded">
+		<div class="column small-12">
+			<button type="button" onclick="alert('direction les crédits')">Aller aux crédits</button>
+			<object id="mapStNazaire" data="./svg/map st nazaire-01.svg" type="image/svg+xml"/>
+		</div>
+	</div>
+
+	
+
+		
+	<!-- ce qu'il faut afficher quand on clique sur les batiments-->
+	<div class="reveal" id="dorsale_numérique" data-reveal>
+		<h2> La ville numérique </h2>
+		<p> De nouveaux services seront proposés en ligne par la ville, afin de diffuser la culture digitale et faciliter au quotidien les démarches des habitants.<p>
+		<div class="noteDorsale">
+			<!--code des étoiles et css lié : https://www.creativejuiz.fr/blog/tutoriels/systeme-notation-quelques-lignes-css-->
+		    <a href="#5" title="Donner 5 étoiles">☆</a>
+		    <a href="#4" title="Donner 4 étoiles">☆</a>
+		    <a href="#3" title="Donner 3 étoiles">☆</a>
+		    <a href="#2" title="Donner 2 étoiles">☆</a>
+		    <a href="#1" title="Donner 1 étoile">☆</a>
+		    <span>: Donnez une note à ce projet</span>
+		</div>
+		<button class="close-button" data-close aria-label="Close modal" type="button">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="reveal" id="aquaparc" data-reveal>
+		<h2> L'aquaparc </h2>
+		<p> Ce centre aquatique sera implanté sur le site de la Plaine des sports qui jouxte le parc Léo Lagrange. En complément des équipements déjà existants dans l’agglomération, ce complexe offrira des bassins couverts, un espace bien-être, un solarium et des annexes. <a href="http://www.mairie-saintnazaire.fr/urbanisme-habitat/les-projets-urbains/amenagements-et-equipements-publics/centre-aquatique/" target="_blank"> Pour plus d'informations </a>
+		</p>
+		<div class="noteAquaparc">
+			<!--code des étoiles et css lié : https://www.creativejuiz.fr/blog/tutoriels/systeme-notation-quelques-lignes-css-->
+		    <a href="#5" title="Donner 5 étoiles">☆</a>
+		    <a href="#4" title="Donner 4 étoiles">☆</a>
+		    <a href="#3" title="Donner 3 étoiles">☆</a>
+		    <a href="#2" title="Donner 2 étoiles">☆</a>
+		    <a href="#1" title="Donner 1 étoile">☆</a>
+		    <span>: Donnez une note à ce projet</span>
+		</div>
+		<button class="close-button" data-close aria-label="Close modal" type="button">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="reveal" id="front_de_mer" data-reveal>
+		<h2> Le front de mer </h2>
+		<p> Un réaménagement du front de mer est prévu pour l’été 2017: plantations et mobilier seront introduits (bancs, corbeilles, appuis-vélos, distributeurs de sacs canins). <a href="http://www.mairie-saintnazaire.fr/urbanisme-habitat/les-projets-urbains/amenagements-et-equipements-publics/front-de-mer-iii/" target="_blank">Pour plus d'informations </a>
+		</p>
+		<div class="noteFront">
+			<!--code des étoiles et css lié : https://www.creativejuiz.fr/blog/tutoriels/systeme-notation-quelques-lignes-css-->
+		    <a href="#5" title="Donner 5 étoiles">☆</a>
+		    <a href="#4" title="Donner 4 étoiles">☆</a>
+		    <a href="#3" title="Donner 3 étoiles">☆</a>
+		    <a href="#2" title="Donner 2 étoiles">☆</a>
+		    <a href="#1" title="Donner 1 étoile">☆</a>
+		    <span>: Donnez une note à ce projet</span>
+		</div>
+		<button class="close-button" data-close aria-label="Close modal" type="button">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="reveal" id="salle_multi_évenement" data-reveal>
+		<h2> La salle multi-événements </h2>
+		<p> La salle multi événements ouvrira ses portes fin 2017, dans l’Alvéole 12 de la base sous-marine. Elle mettra à disposition des usagers des équipements adaptés à la grandeur de l’événement. <a href="http://www.mairie-saintnazaire.fr/urbanisme-habitat/les-projets-urbains/amenagements-et-equipements-publics/alveole-12-de-la-base-sous-marine/" target="_blank"> Pour plus d'informations </a>
+		</p>
+		<div class="noteSalle">
+			<!--code des étoiles et css lié : https://www.creativejuiz.fr/blog/tutoriels/systeme-notation-quelques-lignes-css-->
+		    <a href="#5" title="Donner 5 étoiles">☆</a>
+		    <a href="#4" title="Donner 4 étoiles">☆</a>
+		    <a href="#3" title="Donner 3 étoiles">☆</a>
+		    <a href="#2" title="Donner 2 étoiles">☆</a>
+		    <a href="#1" title="Donner 1 étoile">☆</a>
+		    <span>: Donnez une note à ce projet</span>
+		</div>
+		<button class="close-button" data-close aria-label="Close modal" type="button">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="reveal" id="gestion_de_relation_cotoyenne" data-reveal>
+		<h2> La gestion des relations citoyennes </h2>
+		<p> La relation aux usagers est primordiale pour la ville de Saint-Nazaire. Ce projet a pour but de personnaliser les réponses apportées aux habitants et de faciliter ses démarches administratives grâce à de nouvelles technologies. 
+		</p>
+		<div class="noteRelation">
+			<!--code des étoiles et css lié : https://www.creativejuiz.fr/blog/tutoriels/systeme-notation-quelques-lignes-css-->
+		    <a href="#5" title="Donner 5 étoiles">☆</a>
+		    <a href="#4" title="Donner 4 étoiles">☆</a>
+		    <a href="#3" title="Donner 3 étoiles">☆</a>
+		    <a href="#2" title="Donner 2 étoiles">☆</a>
+		    <a href="#1" title="Donner 1 étoile">☆</a>
+		    <span>: Donnez une note à ce projet</span>
+		</div>
+		<button class="close-button" data-close aria-label="Close modal" type="button">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="reveal" id="archives_municipales" data-reveal>
+		<h2> Les archives municipales </h2>
+		<p> Ce projet concerne la rénovation d’un magasin d’archives qui est un lieu de stockage réservé aux agents du service. L’enjeu est de permettre à la ville d’assurer la conservation de son patrimoine écrit.
+		</p>
+		<div class="noteArchives">
+			<!--code des étoiles et css lié : https://www.creativejuiz.fr/blog/tutoriels/systeme-notation-quelques-lignes-css-->
+		    <a href="#5" title="Donner 5 étoiles">☆</a>
+		    <a href="#4" title="Donner 4 étoiles">☆</a>
+		    <a href="#3" title="Donner 3 étoiles">☆</a>
+		    <a href="#2" title="Donner 2 étoiles">☆</a>
+		    <a href="#1" title="Donner 1 étoile">☆</a>
+		    <span>: Donnez une note à ce projet</span>
+		</div>
+		<button class="close-button" data-close aria-label="Close modal" type="button">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="reveal" id="foyers_logements" data-reveal>
+		<h2> Les foyers logements </h2>
+		<p> Des travaux sont prévus sur la résidence autonome “Les Jardins” pour la mi-mars 2017. La rénovation de cette dernière, ainsi que celle d’une autre résidence, “Louise-Michel”, devraient se terminer en mars 2019.
+		</p>
+		<div class="noteFoyers">
+			<!--code des étoiles et css lié : https://www.creativejuiz.fr/blog/tutoriels/systeme-notation-quelques-lignes-css-->
+		    <a href="#5" title="Donner 5 étoiles">☆</a>
+		    <a href="#4" title="Donner 4 étoiles">☆</a>
+		    <a href="#3" title="Donner 3 étoiles">☆</a>
+		    <a href="#2" title="Donner 2 étoiles">☆</a>
+		    <a href="#1" title="Donner 1 étoile">☆</a>
+		    <span>: Donnez une note à ce projet</span>
+		</div>
+		<button class="close-button" data-close aria-label="Close modal" type="button">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="reveal" id="bain_douche" data-reveal>
+		<h2> Les bains-douches </h2>
+		<p> Afin de remettre en état la couverture et l’étanchéité du bâtiment, des travaux sont envisagés aux Bains-Douches de Méan-Penhoët.</p>
+		<div class="noteBain">
+			<!--code des étoiles et css lié : https://www.creativejuiz.fr/blog/tutoriels/systeme-notation-quelques-lignes-css-->
+		    <a href="#5" title="Donner 5 étoiles">☆</a>
+		    <a href="#4" title="Donner 4 étoiles">☆</a>
+		    <a href="#3" title="Donner 3 étoiles">☆</a>
+		    <a href="#2" title="Donner 2 étoiles">☆</a>
+		    <a href="#1" title="Donner 1 étoile">☆</a>
+		    <span>: Donnez une note à ce projet</span>
+		</div>
+		<button class="close-button" data-close aria-label="Close modal" type="button">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js" defer ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js" defer></script>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/what-input.js"></script>
+	<script src="js/vendor/foundation.js"></script>
+	<script src="js/app.js"></script>
+
+	<script>
+		document.getElementById("mapStNazaire").addEventListener("load", function() {
+			var svg = this.contentDocument;
+
+			//création des différentes instances des projets
+			var dorsale_numérique = svg.getElementById("dorsale_numérique");
+			var aquaparc = svg.getElementById("aquaparc");
+			var front_de_mer = svg.getElementById("front_de_mer");
+			var salle_multi_évenement = svg.getElementById("salle_multi_évenement");
+			var gestion_de_relation_cotoyenne = svg.getElementById("gestion_de_relation_cotoyenne");
+			var archives_municipales = svg.getElementById("archives_municipales");
+			var foyers_logements = svg.getElementById("foyers_logements");
+			var bain_douche = svg.getElementById("bain_douche");
+
+			//fonction à effectuer par projet
+			$(dorsale_numérique).hover(focus($(dorsale_numérique)));
+			$(aquaparc).hover(focus($(aquaparc)));
+			$(front_de_mer).hover(focus($(front_de_mer)));
+			$(salle_multi_évenement).hover(focus($(salle_multi_évenement)));
+			$(gestion_de_relation_cotoyenne).hover(focus($(gestion_de_relation_cotoyenne)));
+			$(archives_municipales).hover(focus($(archives_municipales)));
+			$(foyers_logements).hover(focus($(foyers_logements)));
+			$(bain_douche).hover(focus($(bain_douche)));
+
+			//quand on passe sur un des projets principaux
+			function focus(elem){
+				elem.mouseenter(function enter(){
+					this.style.opacity=0.5;
+					this.style.cursor = "pointer";
+				});
+				elem.mouseleave(function exit(){
+					this.style.opacity = 1;
+				});
+				elem.click(function infoBulle(){
+					var name = this.getAttribute('id');
+					$('#' + name).foundation('open');
+				});
+			};
+		});
+	</script>
+</body>
+</html>

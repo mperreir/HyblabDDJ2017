@@ -19,5 +19,8 @@
     "serve-favicon": "^2.3.2"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  }
 }

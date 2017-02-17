@@ -1,0 +1,76 @@
+body 
+{
+   font-family: 'Roboto', sans-serif;
+   font-weight:300;
+}
+
+h2
+{
+	text-align: center;
+}
+
+#boutonRetour
+{
+   position: absolute;
+   top:75vh;
+   right:5vh;
+   font-weight : bold;
+   border:2px solid black;
+   padding:5px;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+#boutonCredits
+{
+   position: absolute;
+   top: 70vh;
+   right:5vh;
+   font-weight : bold;
+   border:2px solid black;
+   padding:5px;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+#boutonCredits:hover
+{
+   background-color: #549E00;
+}
+
+#boutonRetour:hover
+{
+   background-color: #549E00;
+}
+
+.column
+{
+	padding:0;
+}
+
+/* CSS des étoiles pour chaque batiment */
+.noteDorsale, .noteAquaparc, .noteFront, .noteSalle, .noteRelation, .noteArchives, .noteFoyers, .noteBain 
+{
+   direction: rtl;
+   text-align: center;
+}
+.noteDorsale a, .noteAquaparc a, .noteFront a, .noteSalle a, .noteRelation a, .noteArchives a, .noteFoyers a, .noteBain a 
+{
+   color: #aaa;
+   text-decoration: none;
+   font-size: 3em;
+   transition: color .4s;
+}
+
+.noteDorsale a:hover, .noteDorsale a:focus, .noteDorsale a:hover ~ a, .noteDorsale a:focus ~ a,
+.noteAquaparc a:hover, .noteAquaparc a:focus, .noteAquaparc a:hover ~ a, .noteAquaparc a:focus ~ a,
+.noteFront a:hover, .noteFront a:focus, .noteFront a:hover ~ a, .noteFront a:focus ~ a,
+.noteSalle a:hover, .noteSalle a:focus, .noteSalle a:hover ~ a, .noteSalle a:focus ~ a,
+.noteRelation a:hover, .noteRelation a:focus, .noteRelation a:hover ~ a, .noteRelation a:focus ~ a,
+.noteArchives a:hover, .noteArchives a:focus, .noteArchives a:hover ~ a, .noteArchives a:focus ~ a,
+.noteFoyers a:hover, .noteFoyers a:focus, .noteFoyers a:hover ~ a, .noteFoyers a:focus ~ a,
+.noteBain a:hover, .noteBain a:focus, .noteBain a:hover ~ a, .noteBain a:focus ~ a
+{
+   color: orange;
+   cursor: pointer;
+}
