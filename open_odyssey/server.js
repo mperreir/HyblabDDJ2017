@@ -8,7 +8,7 @@ var http = require('http');
 
 var app = express();
 
-var port = 8080;
+//var port = 8080;
 
 // Minimum routing: serve static content from the html directory
 app.use(express.static(path.join(__dirname, '/')));
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, '/')));
 module.exports = app;
 
 
-var server = http.createServer(app);
+/*var server = http.createServer(app);
 server.listen(port, function() {
   console.log("Node server running on http://localhost:"+port);
-  });
+});*/
