@@ -8,19 +8,18 @@
   },
   "dependencies": {
     "body-parser": "^1.16.1",
-    "jquery": "^3.1.1",
     "chartist-plugin-legend": "^0.6.1",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.5",
     "express": "^4.10.2",
+    "jquery": "^3.1.1",
     "morgan": "^1.8.1",
     "mysql": "^2.13.0",
     "request": "^2.48.0",
-    "serve-favicon": "^2.3.2"
+    "serve-favicon": "^2.3.2",
+    "sqlite3": "^3.1.8",
+    "twig": "^0.10.3"
   },
   "author": "",
-  "license": "MIT",
-  "scripts": {
-    "start": "node server.js"
-  }
+  "license": "MIT"
 }

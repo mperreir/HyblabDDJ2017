@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'public'));
 /**
  * ========= DATABASE =========
  */
-var quizdb_name = "saint_nazaire/quiz.db";
+var quizdb_name = path.join(__dirname, 'quiz.db');
 var exists = fs.existsSync(quizdb_name);
 // Database init
 var db = new sqlite3.Database(quizdb_name);
@@ -58,10 +58,6 @@ db.close();
 /**
  * ========= ROUTE =========
  */
-/**
- * Default route
- */
-app.use(express.static(path.join(__dirname, 'public')));
 /**
  *  Route to Quiz
  */
@@ -179,6 +175,12 @@ app.get('/note/add', function(req, res){
     });
     db.close();
 });
+
+/**
+ * Default route
+ */
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 /**
  * ========= EOF =========

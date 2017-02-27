@@ -9,7 +9,7 @@ var BUBBLE_TIME_OUT = 800;
 
 
 $( document ).ready(function() {
-	
+
 	// hiding sections
 	$('#section1_intro').hide();
 	$('#section1_age').hide();
@@ -39,12 +39,12 @@ $( document ).ready(function() {
 
 
 	// select either male or female image
-	$('#male').click( function() { 
+	$('#male').click( function() {
 		$('.section1_gender_img').attr("src", "svg/male.svg");
 
 		$('#select_female').css("background-color", "");
 		$('#select_male').css("background-color", "yellow");
-		
+
 	});
 	$('#female').click( function() {
 		$('.section1_gender_img').attr("src", "svg/female.svg");
@@ -57,8 +57,8 @@ $( document ).ready(function() {
 
 
 	// slow scroll to selected section
-	$('#toSection1_age').click(function() { 
-		scroll( $('#section1_intro') , $('#section1_age') );  
+	$('#toSection1_age').click(function() {
+		scroll( $('#section1_intro') , $('#section1_age') );
 	});
 
 
@@ -69,8 +69,8 @@ $( document ).ready(function() {
 		var src = $('.section1_gender_img').attr('src');
 
 		// if src si not defined we do not continue
-		if (src != undefined) { 
-			scroll( $('#section1_gender') , $('#section1_intro') ); 
+		if (src != undefined) {
+			scroll( $('#section1_gender') , $('#section1_intro') );
 		}
 	});
 
@@ -82,8 +82,8 @@ $( document ).ready(function() {
 		var src = $('.section1_gender_img').attr('src');
 
 		// if src si not defined we do not continue
-		if (src != undefined) { 
-			scroll( $('#section1_gender') , $('#section1_age') ); 
+		if (src != undefined) {
+			scroll( $('#section1_gender') , $('#section1_age') );
 		}
 	});
 
@@ -104,7 +104,7 @@ $( document ).ready(function() {
 		var choice = $('input[name=residence]:checked').val();
 
 		// if the user didn't select yes nor no we do not continue
-		if (choice != undefined) { 
+		if (choice != undefined) {
 
 			// prepare ajax request to the database
 			var sexe = 1;
@@ -114,7 +114,7 @@ $( document ).ready(function() {
 			if (choice == "no") { stnazaire = 0 } // saint-nazaire = 1 si habitant et 0 sinon
 			var ajaxRequest = "/saint_nazaire/utilisateurs/add?sexe=" + sexe + "&age=" + age + "&stnazaire=" + stnazaire;
 
-			
+
 			// request to the database and creation of the cookie
 			$.get(ajaxRequest, function(response) {
 				$.getJSON("/saint_nazaire/utilisateurs/get/lastid", function(json) {
@@ -127,7 +127,7 @@ $( document ).ready(function() {
 			});
 
 			// going to next section
-			scroll( $('#section1_residence') , $('#section2_prechart') ); 
+			scroll( $('#section1_residence') , $('#section2_prechart') );
 			$('#bubble1').show(BUBBLE_TIME_IN).addClass(BUBBLE_ANIM_IN);
 		}
 
@@ -135,9 +135,9 @@ $( document ).ready(function() {
 
 
 	$('.nextBubble').click(function() {
-		
+
 		console.log("Next !");
-		
+
 		// number of the next bubble
 		var currentBubble = parseInt($('#currentBubble').val());
 
@@ -155,7 +155,7 @@ $( document ).ready(function() {
 function drawChart(taxesCost) {
 
 	$.getJSON( "data/repartition_impots_2017.json", function( json ) {
-		
+
 		var fields = [];
 		var values = [];
 
@@ -249,7 +249,7 @@ function changeBubbleTo(no) {
 
 	console.log(no);
 
-	// hidding and showing the bubbles 
+	// hidding and showing the bubbles
 	switch(no) {
 
 	case 3:
@@ -269,18 +269,18 @@ function changeBubbleTo(no) {
 		var taxesCost = $('#taxesCost').val();
 
 		// if no answer or illegal answer nothing happend
-		if (taxesCost != "" && parseInt(taxesCost) >= 0) { 
+		if (taxesCost != "" && parseInt(taxesCost) >= 0) {
 			$('#bubble6, #bubble7').removeClass(BUBBLE_ANIM_IN).addClass(BUBBLE_ANIM_OUT).hide(BUBBLE_TIME_OUT);
 			drawChart(parseInt(taxesCost));
-			scroll( $('#section2_prechart') , $('#section2_chart') ); 
-			$('#currentBubble').val(8); 	
+			scroll( $('#section2_prechart') , $('#section2_chart') );
+			$('#currentBubble').val(8);
 		}
 
 		break;
 
 
 	case 8:
-		scroll( $('#section2_chart') , $('#section2_postchart') ); 
+		scroll( $('#section2_chart') , $('#section2_postchart') );
 		$('#bubble9').show(BUBBLE_TIME_IN).addClass(BUBBLE_ANIM_IN);
 		$('#currentBubble').val(9);
 		break;
@@ -297,12 +297,12 @@ function changeBubbleTo(no) {
 		var choice = $('input[name=projectsPart]:checked').val();
 
 		// if the user didn't select yes nor no we do not continue
-		if (choice != undefined) { 
+		if (choice != undefined) {
 			$('#bubble14, #bubble15').removeClass(BUBBLE_ANIM_IN).addClass(BUBBLE_ANIM_OUT).hide(BUBBLE_TIME_OUT);
 			$('#bubble16').show(BUBBLE_TIME_IN).addClass(BUBBLE_ANIM_IN);
 			$('#currentBubble').val(16);
 		}
-		
+
 		break;
 
 
